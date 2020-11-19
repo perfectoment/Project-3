@@ -1,30 +1,41 @@
-const express = require("express");
+// Sets up the Express App
+// =============================================================
+var express = require("express");
+var session = require("express-session");
+var passport = require("./config/passport");
 
-const mongoose = require("mongoose");
+var app = express();
+var PORT = process.env.PORT || 8080;
 
-const PORT = process.env.PORT || 8080;
+// Requiring our models for syncing
+var db = require("./models");
 
-const app = express();
-
-
-
+// Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.use(express.static("public"));
+// Static directory
+//has to find index.html becasue its in a file
+app.use(express.static(__dirname + '/public'));
+//everything a static folder could be better but works
+app.use(express.static(__dirname + '/'));
+// =============================================================
+//Passport
+app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
+// initializes passport 
+app.use(passport.initialize());
+app.use(passport.session());
+// =============================================================
+// Routes
+// =============================================================
+// require("./routes/api-routes.js")(app);
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/quiz", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useCreateIndex: true,
-  useFindAndModify: false
-});
 
-// routes
-
-// app.use(require("./routes/api-routes.js"));
-
-
-app.listen(PORT, () => {
-  console.log(`App running on port ${PORT}!`);
+// Syncing our sequelize models and then starting our Express app
+// =============================================================
+//keeps on deleting database
+db.sequelize.sync().then(function() {
+  app.listen(PORT, function() {
+    console.log("App listening on PORT " + PORT);
+  });
 });
