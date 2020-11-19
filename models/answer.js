@@ -1,17 +1,13 @@
 module.exports = function(sequelize, DataTypes) {
     var Answer = sequelize.define("Answer", {
       answertext: {
-        type: DataTypes.TEXT,
+        type: DataTypes.STRING,
         allowNull: false,
       },
       correct: {
         type: DataTypes.BOOLEAN,
         allowNull: false
-      },
-      description:{
-        type: DataTypes.TEXT,      
-      },
-     
+      }
     });
     Answer.associate = function(models) {
       Answer.belongsTo(models.Question, {
