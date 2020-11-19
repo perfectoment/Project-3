@@ -1,21 +1,19 @@
-const mongoose = require("mongoose");
-
-const Schema = mongoose.Schema;
-
-const StudentQuizSchema = new Schema({
-  name: {
-    type: String,
-    unique: true
-  },
-  studentid:[
-    {
-        type: Schema.Types.ObjectId,
-        ref: "User"
-    }
-  ]
+module.exports = function(sequelize, DataTypes) {
+  var StudentQuiz = sequelize.define("StudentQuiz", {
   
-});
-
-const StudentQuiz = mongoose.model("StudentQuiz", StudentQuizSchema);
-
-module.exports = StudentQuiz;
+  });
+  StudentQuiz.associate = function(models) {
+      StudentQuiz.belongsTo(models.User, {
+        foreignKey: {
+          allowNull: false
+        }
+        
+      });
+      StudentQuiz.belongsTo(models.Quiz, {
+        foreignKey: {
+          allowNull: false
+        }
+      });
+  }
+return StudentQuiz
+}
