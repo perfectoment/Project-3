@@ -29,7 +29,17 @@ app.post("/api/user/quiz", function(req, res){
         res.json(results)
     })
 }); 
-
+app.post("/api/user/question", function(req, res){
+    db.Question.create({
+        title: req.body.title,
+        text: req.body.questiontext,
+        description: req.body.description,
+        quizId: req.quiz.id, 
+        
+    }).then(function(results){
+        res.json(results)
+    })
+}); 
 
 app.get("/logout", function(req, res) {
     req.logout();
