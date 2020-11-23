@@ -4,12 +4,9 @@ module.exports = function(sequelize, DataTypes) {
         type: DataTypes.TEXT,
         allowNull: false,
       },
-      title: {
+      questiontitle: {
         type: DataTypes.STRING,
         allowNull: false
-      },
-      description:{
-        type: DataTypes.TEXT,      
       },
      
     });
