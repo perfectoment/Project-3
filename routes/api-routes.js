@@ -22,8 +22,7 @@ app.post("/api/user/quiz", function(req, res){
     db.Quiz.create({
         title: req.body.title,
         subject: req.body.subject,
-        description: req.body.description,
-        userId: req.user.id, 
+        description: req.body.description
         
     }).then(function(results){
         res.json(results)

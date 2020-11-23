@@ -12,7 +12,6 @@ module.exports = function(sequelize, DataTypes) {
       description:{
         type: DataTypes.TEXT,      
       },
-     
     });
     Quiz.associate = function(models) {
       Quiz.hasMany(models.StudentQuiz, {
@@ -20,7 +19,7 @@ module.exports = function(sequelize, DataTypes) {
       });
       Quiz.belongsTo(models.User, {
         foreignKey: {
-          allowNull: false
+          allowNull: true
         }
       });
       Quiz.hasMany(models.Question, {
