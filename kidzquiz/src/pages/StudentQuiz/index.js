@@ -1,10 +1,10 @@
 import { Component } from 'react';
 import Header from "../../Header";
 import Footer from "../../Footer";
-import SignInForm from "../../SignIn";
+import QuizCardS from "../../QuizCardS";
 import Wrapper from "../../Wrapper";
 
-class SignIn extends Component {
+class Subject extends Component {
 
 
 
@@ -13,7 +13,7 @@ class SignIn extends Component {
 
             <Wrapper>
                 <Header />
-                <SignInForm />
+                <QuizCardS />
                 <Footer />
             </Wrapper>
 
@@ -21,4 +21,4 @@ class SignIn extends Component {
     }
 }
 
-export default SignIn;
+export default Subject;
