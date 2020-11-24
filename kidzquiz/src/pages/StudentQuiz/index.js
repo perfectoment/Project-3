@@ -1,8 +1,8 @@
 import { Component } from 'react';
-import Header from "../../Header";
-import Footer from "../../Footer";
-import QuizCardS from "../../QuizCardS";
-import Wrapper from "../../Wrapper";
+import Header from "../../components/Header/index";
+import Footer from "../../components/Footer/index";
+import QuizCardS from "../../components/QuizCardS/index";
+import Wrapper from "../../components/Wrapper/index";
 
 class Subject extends Component {
 
