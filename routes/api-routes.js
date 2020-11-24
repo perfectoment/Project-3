@@ -32,22 +32,22 @@ app.post("/api/user/quiz", function(req, res){
         res.json(results)
     })
 }); 
-app.post("/api/quiz/question", function(req, res){
+app.post("/api/question/:id", function(req, res){
     db.Question.create({
-        questiontitle: req.body.title,
-        questionstext: req.body.questiontext,
-        quizId: req.body.id
+        questiontitle: req.body.questiontitle,
+        questiontext: req.body.questiontext,
+        QuizId: req.params.id
 
     }).then(function(results){
         res.json(results)
     });
 });
 
-app.post("api/question/answer", function(req,res){
+app.post("/api/answer/:id", function(req,res){
     db.Answer.create({
         answertext: req.body.answertext,
         correct: req.body.correct,
-        questionId: req.params.id
+        QuestionId: req.params.id
     }).then(function(results){
         res.json(results)
     });
@@ -60,15 +60,15 @@ app.get("/api/user/:id/quiz", function(req, res){
     })
 })
 
-app.get("/api/quiz/:subject", function(req, res){
-    db.Quiz.findAll({where:{subject:req.body.subject}, 
-    }).then(function(results){
-        res.json(results)
-    });
+// app.get("/api/quiz/:subject", function(req, res){
+//     db.Quiz.findAll({where:{subject:req.body.subject}, 
+//     }).then(function(results){
+//         res.json(results)
+//     });
 
-});
+// });
 
-app.get("/api/quiz/:id/", function(req,res){
+app.get("/api/quiz/:id", function(req,res){
     db.Quiz.findOne({
         where:{
             id: req.params.id
@@ -76,12 +76,14 @@ app.get("/api/quiz/:id/", function(req,res){
         include: [{
 
             model: db.Question,
-            attributes:["id", "questiontitle", "questiontext"]
+            attributes:["id", "questiontitle", "questiontext"],
+            include:[{
+
+                model: db.Answer,
+                attributes:["id", "answertext", "correct"] 
+            }]
         },
-        {
-            model: db.Answer,
-            attributes:["id", "answertext", "correct"]
-        }
+    
         ]
 
 
