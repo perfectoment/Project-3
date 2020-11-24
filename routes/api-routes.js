@@ -32,23 +32,14 @@ app.post("/api/user/question", function(req, res){
     db.Question.create({
         title: req.body.title,
         text: req.body.questiontext,
-        description: req.body.descrip
-        quizId: req.quiz.id, 
+        description: req.body.description,
+        quizId: req.quiz.id
 
-        
     }).then(function(results){
         res.json(results)
     });
 });
-app.post("api/quiz/:id/questions", function(req, res){   
-    db.Question.create({
-        questiontitle: req.body.questiontitle,
-        questiontext: req.body.questiontext,
-        QuizId: req.params.id
-    }).then(function(results){
-        res.json(results)
-    });
-}) 
+
 app.post("api/questions/:id/answers", function(req,res){
     db.Answer.create({
         answertext: req.body.answertext,
