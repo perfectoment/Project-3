@@ -14,9 +14,9 @@ module.exports = function(sequelize, DataTypes) {
       },
     });
     Quiz.associate = function(models) {
-      Quiz.hasMany(models.StudentQuiz, {
-        onDelete: "cascade"
-      });
+      // Quiz.hasMany(models.StudentQuiz, {
+      //   onDelete: "cascade"
+      // });
       Quiz.belongsTo(models.User, {
         foreignKey: {
           allowNull: true

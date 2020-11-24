@@ -9,11 +9,7 @@ module.exports = function(sequelize, DataTypes) {
         }
         
       });
-      StudentQuiz.belongsTo(models.Quiz, {
-        foreignKey: {
-          allowNull: false
-        }
-      });
+    
   }
 return StudentQuiz
 }
