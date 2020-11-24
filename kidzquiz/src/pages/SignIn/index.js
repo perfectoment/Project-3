@@ -1,7 +1,6 @@
 import { Component } from 'react';
-import Header from "../../components/Header";
-import Footer from "../../components/Footer";
-import SignInForm from "../../components/SignIn";
+import Title from "../../components/Title";
+import SignInModal from "../../components/SignIn";
 import Wrapper from "../../components/Wrapper";
 
 class SignIn extends Component {
@@ -12,9 +11,8 @@ class SignIn extends Component {
         return (
 
             <Wrapper>
-                <Header />
-                <SignInForm />
-                <Footer />
+                <Title />
+                <SignInModal/>
             </Wrapper>
 
         );

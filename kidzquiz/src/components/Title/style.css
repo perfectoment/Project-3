@@ -1,0 +1,16 @@
+.item {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 4px;
+    display: inline-block;
+
+}
+
+#logobox {
+    top: 30%;
+    width: 550px;
+    height: 550px;
+    bottom: 30px;
+    margin-left: 25%;
+}
