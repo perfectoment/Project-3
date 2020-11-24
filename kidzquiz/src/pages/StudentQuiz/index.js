@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import Header from "../../components/Header/index";
 import Footer from "../../components/Footer/index";
-import QuizCardS from "../../components/QuizCardS/index";
+import StudentQuizList from "../../components/StudentQuizList/index";
 import Wrapper from "../../components/Wrapper/index";
 
 class Subject extends Component {
@@ -13,7 +13,7 @@ class Subject extends Component {
 
             <Wrapper>
                 <Header />
-                <QuizCardS />
+                <StudentQuizList />
                 <Footer />
             </Wrapper>
 
