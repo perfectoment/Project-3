@@ -1,34 +1,19 @@
-import React, { Component } from 'react';
-import { Navbar } from 'react-bootstrap';
+import React from "react";
+import { NavLink } from "react-router-dom";
 
-
-
-
-class Header extends Component {
-    render() {
-      return (
-        <div className="appHeader">
-          <Helmet
-              title={consts.TITLE}
-              titleTemplate={`%s - ${this.props.details}`}
-          />
-  
-          <Navbar bg="light" variant="light" >
-            <Navbar.Brand href="/">{ consts.TITLE }</Navbar.Brand>
-            {
-              (this.props.auth.token === '') ?
-                null
-              :
-                (<Navbar.Collapse className="justify-content-end">
-                  <Navbar.Text>
-                    <a href="/logout">Logout</a>
-                  </Navbar.Text>
-                </Navbar.Collapse>)
-            }
-            </Navbar>
-        </div>
-      );
-    }
-  }
-  
-  export default Header;
+function Header() {
+  return (
+    <nav>
+      <NavLink exact activeClassName="active" to="/">
+        Home
+      </NavLink>
+      <NavLink activeClassName="active" to="/users">
+        Users
+      </NavLink>
+      <NavLink activeClassName="active" to="/contact">
+        Contact
+      </NavLink>
+    </nav>
+  );
+}
+export default Header;
