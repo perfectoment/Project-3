@@ -3,7 +3,7 @@ import "./style.css";
 
 
 
-function QuizBankS(props) {
+function TeacherQuizBank(props) {
 
     return (
 
@@ -18,4 +18,4 @@ function QuizBankS(props) {
     );
 }
 
-export default QuizBankS;
+export default TeacherQuizBank;
