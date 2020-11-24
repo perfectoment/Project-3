@@ -2,7 +2,7 @@ import { Component } from 'react';
 
 import Header from "../../components/Header/index";
 import Footer from "../../components/Footer/index";
-import StudentSubject from "../../StudentSubject";
+import StudentSubject from "../../components/StudentSubject/index";
 import Wrapper from "../../components/Wrapper/index";
 
 
