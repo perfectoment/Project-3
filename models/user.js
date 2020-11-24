@@ -21,13 +21,12 @@ module.exports = function(sequelize, DataTypes) {
     
   });
   User.associate = function(models) {
-    User.hasMany(models.StudentQuiz, {
-      onDelete: "cascade",
-      foreignKey: "userId"
-    });
+    // User.hasMany(models.StudentQuiz, {
+    //   onDelete: "cascade",
+    //   foreignKey: "userId"
+    // });
     User.hasMany(models.Quiz, {
       onDelete: "cascade",
-      foreignKey: "userId"
     });
   };
 
