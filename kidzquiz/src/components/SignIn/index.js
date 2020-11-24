@@ -1,12 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import "./style.css";
+import Modal from 'react-modal';
 
 
+Modal.setAppElement('#root')
 
-function SignInForm(props) {
+function SignInModal() {
+  const [modalIsOpen, setModalIsOpen] = useState(false)
 
   return (
 
+    <div className="SignInModal">
+      <button onClick={() => setModalIsOpen(true)}>START</button>
+    <Modal isOpen={modalIsOpen} shouldCloseOnOverlayClick={false} onRequestClose={() => setModalIsOpen(false)}>
+      
 
     <section class="container">
       <div class="row">
@@ -42,8 +49,11 @@ function SignInForm(props) {
       </div>
     </section >
 
+    </Modal>
+    </div>
+
   );
 
 }
 
-export default SignInForm;
+export default SignInModal;
