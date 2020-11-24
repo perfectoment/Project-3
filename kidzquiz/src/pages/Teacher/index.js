@@ -13,7 +13,8 @@ class MakeQuiz extends Component {
 
             <Wrapper>
                 <Header />
-                <QuizBankT />
+                <MakeQuiz />
+                <TeacherQuizBank />
                 <Footer />
             </Wrapper>
 

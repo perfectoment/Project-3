@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import Header from "../../Header";
 import Footer from "../../Footer";
-import QuizSubjectS from "../../QuizSubjectS";
+import StudentSubject from "../../StudentSubject";
 import Wrapper from "../../Wrapper";
 
 class Subject extends Component {
@@ -13,7 +13,7 @@ class Subject extends Component {
 
             <Wrapper>
                 <Header />
-                <QuizSubjectS />
+                <StudentSubject />
                 <Footer />
             </Wrapper>
 
