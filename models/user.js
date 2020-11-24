@@ -17,16 +17,17 @@ module.exports = function(sequelize, DataTypes) {
     role:{
       type: DataTypes.STRING,
       allowNull:false,
-      
     }
-   
+    
   });
   User.associate = function(models) {
     User.hasMany(models.StudentQuiz, {
-      onDelete: "cascade"
+      onDelete: "cascade",
+      foreignKey: "userId"
     });
     User.hasMany(models.Quiz, {
-      onDelete: "cascade"
+      onDelete: "cascade",
+      foreignKey: "userId"
     });
   };
 

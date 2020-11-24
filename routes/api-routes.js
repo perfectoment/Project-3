@@ -22,8 +22,19 @@ app.post("/api/user/quiz/", function(req, res){
     db.Quiz.create({
         title: req.body.title,
         subject: req.body.subject,
-        description: req.body.description,
-        UserId: req.user.id, 
+        description: req.body.description
+        
+    }).then(function(results){
+        res.json(results)
+    })
+}); 
+app.post("/api/user/question", function(req, res){
+    db.Question.create({
+        title: req.body.title,
+        text: req.body.questiontext,
+        description: req.body.descrip
+        quizId: req.quiz.id, 
+
         
     }).then(function(results){
         res.json(results)
@@ -48,6 +59,7 @@ app.post("api/questions/:id/answers", function(req,res){
     });
 }); 
 
+
 app.get("/api/quiz/:subject", function(req, res){
     db.Quiz.findAll({where:{subject:req.body.subject}, 
     }).then(function(results){
@@ -62,6 +74,7 @@ app.get("/api/quiz/:id/", function(req,res){
         res.json(results)
     });   
 })
+
 
 app.get("/logout", function(req, res) {
     req.logout();
