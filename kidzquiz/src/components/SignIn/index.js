@@ -10,12 +10,12 @@ function SignInModal() {
 
   return (
 
-    <div className="SignInModal">
-      <button onClick={() => setModalIsOpen(true)}>START</button>
+    <div className="modal">
+      <button className="btn btn-success btn-circle btn-xl" onClick={() => setModalIsOpen(true)}>START</button>
     <Modal isOpen={modalIsOpen} shouldCloseOnOverlayClick={false} onRequestClose={() => setModalIsOpen(false)}>
       
 
-    <section class="container">
+    <section class="container" id="signform">
       <div class="row">
         <div class="card text-center col-sm-8 m-5 p-3" id="dataform">
           <div class="field">

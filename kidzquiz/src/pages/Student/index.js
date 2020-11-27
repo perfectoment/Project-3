@@ -1,11 +1,9 @@
 import { Component } from 'react';
-
-import Header from "../../components/Header/index";
-import Footer from "../../components/Footer/index";
+import Header from "../../Header";
+import Footer from "../../Footer";
 import StudentSubject from "../../components/StudentSubject/index";
-import Wrapper from "../../components/Wrapper/index";
-
-
+import StudentQuizList from "../../StudentQuizList";
+import Wrapper from "../../Wrapper";
 
 class Subject extends Component {
 
