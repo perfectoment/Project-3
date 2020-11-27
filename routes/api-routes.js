@@ -14,8 +14,8 @@ app.post("/api/signup", function(req, res) {
         role: req.body.role
     }).then(function() {
         if(req.body.role === "student"){
-        res.redirect(307, "/api/student")}
-        else(res.redirect(307, "/api/teacher"))
+        res.redirect(307, "/student")}
+        else(res.redirect(307, "/teacher"))
         })
         .catch(function(err) {
         res.status(401).json(err);
@@ -25,7 +25,8 @@ app.post("/api/user/quiz", function(req, res){
     db.Quiz.create({
         title: req.body.title,
         subject: req.body.subject,
-        description: req.body.description
+        description: req.body.description,
+        UserId: req.user.id
         
     }).then(function(results){
         console.log(results)
@@ -53,8 +54,8 @@ app.post("/api/answer/:id", function(req,res){
     });
 }); 
 
-app.get("/api/user/:id/quiz", function(req, res){
-    db.Quiz.findAll({where: {userid:req.params.id},
+app.get("/api/user/:id", function(req, res){
+    db.Quiz.findAll({where: {UserId:req.params.id},
     }).then(function(results){
         res.json(results)
     })
@@ -69,7 +70,7 @@ app.get("/api/user/:id/quiz", function(req, res){
 // });
 
 app.get("/api/quiz/:id", function(req,res){
-    db.Quiz.findOne({
+    db.Quiz.findAll({
         where:{
             id: req.params.id
         },
