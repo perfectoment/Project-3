@@ -100,4 +100,28 @@ app.get("/logout", function(req, res) {
     });
 
 
-}
+};
+
+app.delete("/api/quiz/:id", function(req, res){
+    db.Quiz.delete({
+        where:{
+            id: req.params.id
+        },
+        include: [{
+
+            model: db.Question,
+            attributes:["id", "questiontitle", "questiontext"],
+            include:[{
+
+                model: db.Answer,
+                attributes:["id", "answertext", "correct"] 
+            }]
+        },
+    
+        ]
+
+
+    }).then(function(results){
+        res.json(results)
+    });   
+})
