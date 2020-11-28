@@ -33,7 +33,7 @@ function Title() {
     return (
 
 
-        <section class="container" id="logobox">
+        <section class="container">
             <div class="row">
                 <img className="item div-thumbnail logo1" src={K} alt="K"></img>
                 <img className="item div-thumbnail logo2" src={I2} alt="I"></img>

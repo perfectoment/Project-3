@@ -1,11 +1,11 @@
-import React from "react";
-import "./style.css";
+// import React from "react";
+// import "./style.css";
 
 
 
-function TeacherQuizBank(props) {
+// function TeacherQuizBank(props) {
 
-    return (
+//     return (
 
 
         <section className="container">
@@ -20,7 +20,7 @@ function TeacherQuizBank(props) {
         </section>
 
 
-    );
-}
+//     );
+// }
 
-export default TeacherQuizBank;
+// export default TeacherQuizBank;
