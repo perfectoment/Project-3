@@ -5,14 +5,18 @@ import Wrapper from "../../components/Wrapper";
 
 class SignIn extends Component {
 
-
+    handleSubmit = event => {
+        event.preventDefault()
+    }
+    
 
     render() {
         return (
 
             <Wrapper>
-                <Title />
-                <SignInModal/>
+                <Title/>
+                <SignInModal handleSubmit={this.handleSubmit}
+                />
             </Wrapper>
 
         );
