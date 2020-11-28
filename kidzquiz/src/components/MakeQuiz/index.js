@@ -14,26 +14,28 @@ function MakeQuiz() {
                 <div className="card-body">
                     <h5 className="card-title">MAKE QUIZ</h5>
 
-                    <form className="form-group" id="" onSubmit={(event) => props.handleSubmit(event)}>
+                    <form className="form-group" ref="" onSubmit={(event) => props.handleSubmit(event)}>
 
-                        <label className="label">Question Input</label>
+                        <label className="label">Input Question</label>
                         <div className="input-group-text">
-                            <input type="text" className="form-control" id="question" onInput={(event) => props.handleInputQuestion(event)} />
+                            <input required type="text" name="question" />
                         </div>
 
 
-                        <label className="label">Answer Input</label>
+                        <label className="label">Wrong Answers</label>
                         <div className="input-group-text">
-                            <input type="text" className="form-control" id="answer1" onInput={(event) => props.handleInput(event)} />
+                            <input required type="text" name="answer1" />
                         </div>
                         <div className="input-group-text">
-                            <input type="text" className="form-control" id="answer2" onInput={(event) => props.handleInput(event)} />
+                            <input required type="text" name="answer2" />
                         </div>
                         <div className="input-group-text">
-                            <input type="text" className="form-control" id="answer3" onInput={(event) => props.handleInput(event)} />
+                            <input required type="text" name="answer3" />
                         </div>
+
+                        <label className="label">Correct Answer</label>
                         <div className="input-group-text">
-                            <input type="text" className="form-control" id="correctAnswer" onInput={(event) => props.handleInput(event)} />
+                            <input required type="text" name="correctAnswer" />
                         </div>
 
                         <button className="btn btn-success" type="submit" />

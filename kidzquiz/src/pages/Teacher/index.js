@@ -6,7 +6,6 @@ import Wrapper from "../../components/Wrapper";
 class MakeQuiz extends Component {
 
 
-
     render() {
         return (
 
