@@ -3,7 +3,7 @@ import "./style.css";
 
 
 
-function StudentQuizCard(props) {
+function TeacherQuizCard(props) {
 
     return (
 
@@ -21,4 +21,5 @@ function StudentQuizCard(props) {
     );
 }
 
-export default StudentQuizCard;
+export default TeacherQuizCard;
+

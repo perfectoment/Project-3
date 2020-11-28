@@ -3,7 +3,7 @@ import "./style.css";
 
 
 
-function TeacherQuizBank(props) {
+function StudentQuizBank(props) {
 
     return (
 
@@ -17,4 +17,4 @@ function TeacherQuizBank(props) {
     );
 }
 
-export default TeacherQuizBank;
+export default StudentQuizBank;
