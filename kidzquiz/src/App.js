@@ -3,6 +3,7 @@ import SignIn from "../src/pages/SignIn"
 import Student from "../src/pages/Student"
 import StudentQuiz from "../src/pages/StudentQuiz"
 import Teacher from "../src/pages/Teacher"
+import Navbar from "./components/Navbar";
 
 import {
   BrowserRouter,
@@ -18,6 +19,7 @@ class App extends Component {
     return (
 
       <BrowserRouter basename="/">
+                <Navbar />
           <Route exact path="/" component={SignIn} />
           <Route path="/Student" component={Student} />
           <Route path="/StudentQuiz" component={StudentQuiz} />
