@@ -3,11 +3,8 @@ import "./style.css";
 
 
 
-function StudentQuizCard(props) {
+function TeacherQuizCard(props) {
 
-
-
-    
     return (
 
         <div className="card text-warning text-center rounded flex-row">
@@ -24,4 +21,5 @@ function StudentQuizCard(props) {
     );
 }
 
-export default StudentQuizCard;
+export default TeacherQuizCard;
+

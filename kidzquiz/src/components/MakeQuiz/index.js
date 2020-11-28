@@ -16,6 +16,12 @@ function MakeQuiz() {
 
                     <form className="form-group" ref="" onSubmit={(event) => props.handleSubmit(event)}>
 
+
+                        <label className="label">Select Subject</label>
+                        <div className="input-group-text">
+                            <input required type="text" name="subject" />
+                        </div>
+
                         <label className="label">Input Question</label>
                         <div className="input-group-text">
                             <input required type="text" name="question" />
