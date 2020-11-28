@@ -1,10 +1,10 @@
 import { Component } from 'react';
-import Header from "../../components/Header/index";
-import Footer from "../../components/Footer/index";
-import StudentQuizList from "../../components/StudentQuizList/index";
-import Wrapper from "../../components/Wrapper/index";
+// import Header from "../../components/Header";
+import Footer from "../../components/Footer";
+import StudentQuizCard from "../../components/StudentQuizCard";
+import Wrapper from "../../components/Wrapper";
 
-class Subject extends Component {
+class QuizTime extends Component {
 
 
 
@@ -12,8 +12,8 @@ class Subject extends Component {
         return (
 
             <Wrapper>
-                <Header />
-                <StudentQuizList />
+                {/* <Header /> */}
+                <StudentQuizCard />
                 <Footer />
             </Wrapper>
 
@@ -21,4 +21,4 @@ class Subject extends Component {
     }
 }
 
-export default Subject;
+export default QuizTime;
