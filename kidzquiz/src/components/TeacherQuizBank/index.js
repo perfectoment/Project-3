@@ -1,26 +1,20 @@
-import React from "react";
-import "./style.css";
+// import React from "react";
+// import "./style.css";
 
 
 
-function TeacherQuizBank(props) {
+// function TeacherQuizBank(props) {
 
-    return (
-
-
-        <section className="container">
-            <div className="card" id="quizform">
-                <div className="card-body">
-                    <h5 className="card-title">MAKE QUIZ</h5>
+//     return (
 
 
-                    
-                </div>
-            </div>
-        </section>
+        <div className="d-flex container">
+        {props.children}
+
+        </div>
 
 
-    );
-}
+//     );
+// }
 
-export default TeacherQuizBank;
+// export default TeacherQuizBank;

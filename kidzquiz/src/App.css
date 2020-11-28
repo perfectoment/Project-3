@@ -1,7 +1,7 @@
 body {
   text-align: center;
   background-image: url("./components/assets/kqbggif.gif");
-  position: relative;
+  position: fixed;
   height: 100%;
   width: 100%;
   background-size: cover;
