@@ -3,39 +3,23 @@ import "./style.css";
 
 
 
-function Title() {
-
-
-anime({
-    targets: 'div.item',
-    translateY: [
-        { value: 400, duration: 400,},
-        { value: 200, duration: 800 }
-    ],
-    rotate:{
-        
-        value: '1turn',
-        easing: 'easeInOutSine'
-    },
-    delay: function(el, i, l){ return i * 1000},
-    autoplay:true
-});
+function Title(props) {
 
     return (
 
 
-        <section class="container" id="logobox">
+        <section class="container">
             <div class="row">
-                <div className="item div-thumbnail logo1" src="assets/K1.png"  alt="K"></div>
-                <div className="item div-thumbnail logo2" src="assets/I2.png"  alt="I"></div>
-                <div className="item div-thumbnail logo3" src="assets/D3.png"  alt="D"></div>
-                <div className="item div-thumbnail logo4" src="assets/Z4.png"  alt="Z"></div>
+                <img className="item img-thumbnail" src="assets/D3.png" id="logo1" alt="K"></img>
+                <img className="item img-thumbnail" src="assets/AJ2.png" id="logo2" alt="I"></img>
+                <img className="item img-thumbnail" src="assets/AJ2.png" id="logo3" alt="D"></img>
+                <img className="item img-thumbnail" src="assets/AJ2.png" id="logo4" alt="Z"></img>
             </div>
             <div class="row">
-                <div className="item div-thumbnail logo5" src="assets/Q5.png"  alt="Q"></div>
-                <div className="item div-thumbnail logo6" src="assets/U6.png"  alt="U"></div>
-                <div className="item div-thumbnail logo7" src="assets/I7.png"  alt="I"></div>
-                <div className="item div-thumbnail logo8" src="assets/Z8.png"  alt="Z"></div>
+                <img className="item img-thumbnail" src="assets/AJ2.png" id="logo5" alt="Q"></img>
+                <img className="item img-thumbnail" src="assets/AJ2.png" id="logo6" alt="U"></img>
+                <img className="item img-thumbnail" src="assets/AJ2.png" id="logo7" alt="I"></img>
+                <img className="item img-thumbnail" src="assets/AJ2.png" id="logo8" alt="Z"></img>
             </div>
         </section>
 

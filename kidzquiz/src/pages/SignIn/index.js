@@ -2,7 +2,7 @@ import { Component } from 'react';
 import Title from "../../components/Title";
 import SignInModal from "../../components/SignIn";
 import Wrapper from "../../components/Wrapper";
-import Header from "../../components/Header/index"
+// import Header from "../../components/Header/index"
 
 class SignIn extends Component {
 
@@ -12,7 +12,7 @@ class SignIn extends Component {
         return (
 
             <Wrapper>
-                <Header/>
+                {/* <Header/> */}
                 <Title />
                 <SignInModal/>
             </Wrapper>
