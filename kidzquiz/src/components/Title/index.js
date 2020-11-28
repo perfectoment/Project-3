@@ -39,8 +39,8 @@ function Title() {
                 <img className="item div-thumbnail logo2" src={I2} alt="I"></img>
                 <img className="item div-thumbnail logo3" src={D} alt="D"></img>
                 <img className="item div-thumbnail logo4" src={Z4} alt="Z"></img>
-            </div>
-            <div class="row">
+            {/* </div>
+            <div class="row"> */}
                 <img className="item div-thumbnail logo5" src={Q} alt="Q"></img>
                 <img className="item div-thumbnail logo6" src={U} alt="U"></img>
                 <img className="item div-thumbnail logo7" src={I7} alt="I"></img>
