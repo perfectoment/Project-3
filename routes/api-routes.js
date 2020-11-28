@@ -7,20 +7,24 @@ module.exports = function(app) {
 app.post("/api/login", passport.authenticate("local"), function(req, res) {
     res.json(req.user);
     });
+    
 app.post("/api/signup", function(req, res) {
     db.User.create({
         email: req.body.email,
         password: req.body.password,
         role: req.body.role
-    }).then(function() {
-        if(req.body.role === "student"){
-        res.redirect(307, "/student")}
-        else(res.redirect(307, "/teacher"))
-        })
-        .catch(function(err) {
-        res.status(401).json(err);
-        });
-    });
+    })
+   console.log('HELLO')
+    res.send(req.body)
+})
+    // .then(function() {
+    //     console.log('WORKING')
+    //     res.send(req.body)
+    // }) 
+    // .catch(function(err) {
+    //     res.status(401).json(err);
+    // })
+ 
 app.post("/api/user/quiz", function(req, res){
     db.Quiz.create({
         title: req.body.title,
@@ -100,7 +104,7 @@ app.get("/logout", function(req, res) {
     });
 
 
-};
+
 
 app.delete("/api/quiz/:id", function(req, res){
     db.Quiz.delete({
@@ -125,3 +129,4 @@ app.delete("/api/quiz/:id", function(req, res){
         res.json(results)
     });   
 })
+};

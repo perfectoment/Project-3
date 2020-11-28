@@ -4,6 +4,7 @@ import Footer from "../../components/Footer";
 import Wrapper from "../../components/Wrapper";
 import TeacherQuizBank from "../../components/TeacherQuizBank";
 
+main
 class MakeQuiz extends Component {
 
 
