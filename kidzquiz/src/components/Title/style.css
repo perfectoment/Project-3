@@ -1,17 +1,18 @@
-.item {
+/* .item {
     position: relative;
     width: 75px;
     height: 75px;
     margin: 0px;
     display: inline-block;
     z-index: 2;
-}
+} */
 #logobox {
-    top: 40%;
-    width: 80%;
+    top: 30%;
+    width: 100%;
     height: 575px;
     margin-top: 5%;
-    margin-left: auto;
-    margin-right: auto;
+    position: relative;
+    margin-left: 45%;
+    /* margin-right: auto; */
     z-index: 2;
 }

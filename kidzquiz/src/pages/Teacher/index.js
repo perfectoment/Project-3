@@ -1,25 +1,28 @@
-import { Component } from 'react';
-// import Header from "../../components/Header";
+
+import Header from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import Wrapper from "../../components/Wrapper";
+import MakeQuiz from "../../components/MakeQuiz";
 // import TeacherQuizBank from "../../components/TeacherQuizBank";
+// import TeacherQuizCard from "../../components/TeacherQuizCard";
 
 
-class MakeQuiz extends Component {
+function Teacher() {
 
 
-    render() {
         return (
 
             <Wrapper>
-                {/* <Header /> */}
+                <Header />
                 <MakeQuiz />
-                {/* <TeacherQuizBank /> */}
+                {/* <TeacherQuizBank >
+                    <TeacherQuizCard />
+                </TeacherQuizBank>  */}
                 <Footer />
             </Wrapper>
 
         );
     }
-}
 
-export default MakeQuiz;
+
+export default Teacher;

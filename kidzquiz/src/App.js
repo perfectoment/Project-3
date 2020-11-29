@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import SignIn from "../src/pages/SignIn"
 import Student from "../src/pages/Student"
-import StudentQuiz from "../src/pages/StudentQuiz"
+import QuizTime from "./pages/Quiz"
 import Teacher from "../src/pages/Teacher"
 
 
@@ -13,30 +13,32 @@ import "./App.css";
 
 
 class App extends Component {
-
-
   render() {
     return (
-
+      
       <BrowserRouter basename="/">
-
-        {/* ternary that says 
-        
-          isLoggedinStudent ?
-=======
-                <Navbar />
- main
-          <Route exact path="/" component={SignIn} />
-          <Route path="/Student" component={Student} />
-          <Route path="/StudentQuiz" component={StudentQuiz} />
-          :
-          <Route path="/Teacher" component={Teacher} />
-           */}
-          <Route exact path="/" component={SignIn} />
+      {/* <Navbar /> */}
+      <Route exact path="/" component={SignIn} />
+        {
+          localStorage.user === "student" ? 
+          <>
+          
           <Route path="/student" component={Student} />
-          <Route path="/studentquiz" component={StudentQuiz} />
+          <Route path="/studentQuiz" component={QuizTime} />
+          </>
+          :
+          <>
+        
           <Route path="/teacher" component={Teacher} />
-      </BrowserRouter>
+          </>
+        }
+          {/* {/* <Route exact path="/" component={SignIn} />
+          <Route path="/student" component={Student} />
+
+          <Route path="/studentquiz" component={QuizTime} />
+      <Route path="/teacher" component={Teacher} /> */}
+
+      </BrowserRouter> 
 
     );
   }
