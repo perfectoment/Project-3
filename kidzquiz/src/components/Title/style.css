@@ -1,13 +1,11 @@
-/* .item {
+.item {
     position: relative;
     width: 75px;
     height: 75px;
     margin: 0px;
     display: inline-block;
     z-index: 2;
-
-} */
-
+}
 #logobox {
     top: 40%;
     width: 80%;
