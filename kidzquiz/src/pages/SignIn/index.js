@@ -70,5 +70,3 @@ function SignIn() {
     }
 
 export default SignIn;
-
-//FUCK FUCK FUCK FUCK FUCK FUCKK FUCK
