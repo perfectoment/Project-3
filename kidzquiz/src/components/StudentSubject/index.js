@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./style.css";
 import Modal from 'react-modal';
 import Maths from "../assets/math.png";
-import Spelling from "../assets/spelling.png";
+import Spelling from "../assets/spell.png";
 import World from "../assets/world.png";
 
 

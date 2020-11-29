@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import SignIn from "../src/pages/SignIn"
 import Student from "../src/pages/Student"
-import StudentQuiz from "../src/pages/StudentQuiz"
+import QuizTime from "./pages/Quiz"
 import Teacher from "../src/pages/Teacher"
 
 
@@ -34,8 +34,10 @@ class App extends Component {
         }
           {/* <Route exact path="/" component={SignIn} />
           <Route path="/student" component={Student} />
-          <Route path="/studentquiz" component={StudentQuiz} />
-          <Route path="/teacher" component={Teacher} /> */}
+
+          <Route path="/studentquiz" component={QuizTime} />
+          <Route path="/teacher" component={Teacher} />
+
       </BrowserRouter>
 
     );
