@@ -1,9 +1,8 @@
 
 import Header from "../../components/Navbar";
-import Footer from "../../components/Footer";
 import Wrapper from "../../components/Wrapper";
 import MakeQuiz from "../../components/MakeQuiz";
-// import TeacherQuizBank from "../../components/TeacherQuizBank";
+import TeacherQuizBank from "../../components/TeacherQuizBank";
 // import TeacherQuizCard from "../../components/TeacherQuizCard";
 
 
@@ -14,11 +13,17 @@ function Teacher() {
 
             <Wrapper>
                 <Header />
+                <div className="container">
+                <div className="row">
                 <MakeQuiz />
-                {/* <TeacherQuizBank >
-                    <TeacherQuizCard />
-                </TeacherQuizBank>  */}
-                <Footer />
+                </div>
+                <div className="row">
+                <TeacherQuizBank />
+                </div>
+                </div>
+                   
+        
+        
             </Wrapper>
 
         );
@@ -26,3 +31,5 @@ function Teacher() {
 
 
 export default Teacher;
+
+{/* <TeacherQuizCard /> */}

@@ -13,6 +13,7 @@ function StudentSubject() {
 
     return (
         <main className="container">
+            <div className="row">
             <div className="StudentQuizList">
                 <img className="subject div-thumbnail" onClick={() => setModalIsOpen(true)} src={Maths} alt="Math"></img>
                 <Modal isOpen={modalIsOpen} shouldCloseOnOverlayClick={false} onRequestClose={() => setModalIsOpen(false)}>
@@ -34,6 +35,7 @@ function StudentSubject() {
 
 
                 </Modal>
+            </div>
             </div>
 
 

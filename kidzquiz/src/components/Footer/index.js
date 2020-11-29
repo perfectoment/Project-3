@@ -1,14 +1,8 @@
-import React from 'react'
-
-function Footer() {
-    return (
-        <footer>
-            <small>
-                You can find the code repo on <a href="https://github.com/AndrewKosel/Project-3">Github</a>
-            </small>
-            <p>Built with <span>&hearts;</span> by <a href="">Ryan Nemec, Andrew Kosel, Liam Bradley, AJ Huff</a></p>
-        </footer>
-    )
-}
-
+import React from "react";
+import "./style.css";
+const Footer = () => (
+  <div className="footer">
+    <p>Made by Ryan Nemec, Andrew Kosel, AJ Huff and Liam Bradley</p>
+  </div>
+);
 export default Footer;

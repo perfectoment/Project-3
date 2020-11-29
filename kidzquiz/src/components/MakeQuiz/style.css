@@ -1,0 +1,15 @@
+#quizform {
+    height: 100vh;
+    margin-top: 15%;
+    overflow: scroll;
+    margin-left: 0%;
+    
+
+}
+
+#quizcontain {
+    height: 90%;
+    margin-left: 0%;
+    
+   
+}
