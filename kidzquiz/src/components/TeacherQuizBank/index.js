@@ -1,11 +1,11 @@
-// import React from "react";
-// import "./style.css";
+import React from "react";
+import "./style.css";
 
 
 
-// function TeacherQuizBank(props) {
+function TeacherQuizBank(props) {
 
-//     return (
+    return (
 
 
         <div className="d-flex container">
@@ -14,7 +14,7 @@
         </div>
 
 
-//     );
-// }
+    );
+}
 
-// export default TeacherQuizBank;
+export default TeacherQuizBank;
