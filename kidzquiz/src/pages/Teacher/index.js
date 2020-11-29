@@ -7,10 +7,9 @@ import Wrapper from "../../components/Wrapper";
 // import TeacherQuizCard from "../../components/TeacherQuizCard";
 
 
-class MakeQuiz extends Component {
+function Teacher() {
 
 
-    render() {
         return (
 
             <Wrapper>
@@ -24,6 +23,6 @@ class MakeQuiz extends Component {
 
         );
     }
-}
 
-export default MakeQuiz;
+
+export default Teacher;

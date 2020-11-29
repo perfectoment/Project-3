@@ -23,22 +23,22 @@ class App extends Component {
           localStorage.user === "student" ? 
           <>
           
-          <Route path="/Student" component={Student} />
-          <Route path="/StudentQuiz" component={StudentQuiz} />
+          <Route path="/student" component={Student} />
+          <Route path="/studentQuiz" component={QuizTime} />
           </>
           :
           <>
         
-          <Route path="/Teacher" component={Teacher} />
+          <Route path="/teacher" component={Teacher} />
           </>
         }
-          {/* <Route exact path="/" component={SignIn} />
+          {/* {/* <Route exact path="/" component={SignIn} />
           <Route path="/student" component={Student} />
 
           <Route path="/studentquiz" component={QuizTime} />
-          <Route path="/teacher" component={Teacher} />
+      <Route path="/teacher" component={Teacher} /> */}
 
-      </BrowserRouter>
+      </BrowserRouter> 
 
     );
   }

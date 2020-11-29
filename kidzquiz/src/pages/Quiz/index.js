@@ -4,11 +4,8 @@ import Footer from "../../components/Footer";
 // import TakeQuiz from "../../components/TakeQuiz";
 import Wrapper from "../../components/Wrapper";
 
-class QuizTime extends Component {
+function QuizTime() {
 
-
-
-    render() {
         return (
 
             <Wrapper>
@@ -19,6 +16,6 @@ class QuizTime extends Component {
 
         );
     }
-}
+
 
 export default QuizTime;
