@@ -1,8 +1,8 @@
-import { Component } from 'react';
-// import Header from "../../components/Header";
+
+import Header from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import Wrapper from "../../components/Wrapper";
-// import MakeQuiz from "../../components/MakeQuiz";
+import MakeQuiz from "../../components/MakeQuiz";
 // import TeacherQuizBank from "../../components/TeacherQuizBank";
 // import TeacherQuizCard from "../../components/TeacherQuizCard";
 
@@ -13,11 +13,11 @@ function Teacher() {
         return (
 
             <Wrapper>
-                {/* <Header />
+                <Header />
                 <MakeQuiz />
-                <TeacherQuizBank >
+                {/* <TeacherQuizBank >
                     <TeacherQuizCard />
-                </TeacherQuizBank> */}
+                </TeacherQuizBank>  */}
                 <Footer />
             </Wrapper>
 

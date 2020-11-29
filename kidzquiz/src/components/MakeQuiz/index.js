@@ -2,7 +2,7 @@ import React from "react";
 import "./style.css";
 
 
-function MakeQuiz() {
+function MakeQuiz(props) {
 
     return (
 
@@ -12,7 +12,7 @@ function MakeQuiz() {
                 <div className="card-body">
                     <h5 className="card-title">MAKE QUIZ</h5>
 
-                    <form className="form-group" ref="">
+                    <form className="form-group">
 
 
                         <div class="dropdown">
@@ -20,9 +20,9 @@ function MakeQuiz() {
                             Subject
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" value ="math" href="#" onChange={(event) => props.handleMath(event)}>Math</a>
-                            <a class="dropdown-item" value ="science" href="#" onChange={(event) => props.handleScience(event)} >Science</a>
-                            <a class="dropdown-item" value="history" href="#"onChange={(event) => props.handleHistory(event)} >History</a>
+                            <div class="dropdown-item" value ="math"  onChange={(event) => props.handleMath(event)}>Math</div>
+                            <div class="dropdown-item" value ="science"  onChange={(event) => props.handleScience(event)} >Science</div>
+                            <div class="dropdown-item" value="history" onChange={(event) => props.handleHistory(event)} >History</div>
                         </div>
                         </div>
 
