@@ -10,7 +10,7 @@ function StudentQuizCard(props) {
     
     return (
 
-        <div className="card text-warning text-center rounded flex-row">
+        <div className="card text-warning text-center rounded flex-row" id={props.id}>
         
             <div className="card-body">{`${props.title}`}
             

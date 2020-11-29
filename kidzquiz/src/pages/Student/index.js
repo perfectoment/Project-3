@@ -1,4 +1,3 @@
-
 import Header from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import StudentSubject from "../../components/StudentSubject";
