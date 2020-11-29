@@ -2,8 +2,8 @@ import axios from "axios";
 
 export default {
   // Create user
-  createUser: function() {
-    return axios.post("/api/signup")
+  createUser: function(body) {
+    return axios.post("/api/signup", body)
   },
   // Log in User call
   loginUser: function() {
@@ -29,6 +29,11 @@ export default {
   getQuiz: function(id) {
     return axios.get("/api/quiz/" + id);
   },
+//delete full quizzes with questions, answers
+  deleteQuiz: function(id) {
+    return axios.delete("/api/quiz/" + id);
+  },
+
 //logout
   logoutUser: function() {
     return axios.get("/logout");

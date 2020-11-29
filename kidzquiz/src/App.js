@@ -19,11 +19,23 @@ class App extends Component {
     return (
 
       <BrowserRouter basename="/">
+ loggingin
+        {/* ternary that says 
+        
+          isLoggedinStudent ?
+=======
                 <Navbar />
+ main
           <Route exact path="/" component={SignIn} />
           <Route path="/Student" component={Student} />
           <Route path="/StudentQuiz" component={StudentQuiz} />
+          :
           <Route path="/Teacher" component={Teacher} />
+           */}
+          <Route exact path="/" component={SignIn} />
+          <Route path="/student" component={Student} />
+          <Route path="/studentquiz" component={StudentQuiz} />
+          <Route path="/teacher" component={Teacher} />
       </BrowserRouter>
 
     );

@@ -16,7 +16,7 @@ app.use(express.json());
 
 // Static directory
 //has to find index.html becasue its in a file
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/kidzquiz/build'));
 //everything a static folder could be better but works
 app.use(express.static(__dirname + '/'));
 // =============================================================
