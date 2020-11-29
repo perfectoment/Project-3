@@ -1,10 +1,10 @@
 import { Component } from 'react';
-// import Header from "../../components/Header";
+import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import Wrapper from "../../components/Wrapper";
-// import MakeQuiz from "../../components/MakeQuiz";
-// import TeacherQuizBank from "../../components/TeacherQuizBank";
-// import TeacherQuizCard from "../../components/TeacherQuizCard";
+import MakeQuiz from "../../components/MakeQuiz";
+import TeacherQuizBank from "../../components/TeacherQuizBank";
+import TeacherQuizCard from "../../components/TeacherQuizCard";
 
 
 function Teacher() {
@@ -13,11 +13,11 @@ function Teacher() {
         return (
 
             <Wrapper>
-                {/* <Header />
+                <Navbar />
                 <MakeQuiz />
                 <TeacherQuizBank >
                     <TeacherQuizCard />
-                </TeacherQuizBank> */}
+                </TeacherQuizBank>
                 <Footer />
             </Wrapper>
 

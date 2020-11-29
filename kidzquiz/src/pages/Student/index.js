@@ -1,9 +1,8 @@
-
-import Header from "../../components/Navbar";
+import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import StudentSubject from "../../components/StudentSubject";
-// import StudentQuizBank from "../../components/StudentQuizBank";
-// import StudentQuizCard from "../../components/StudentQuizCard";
+import StudentQuizBank from "../../components/StudentQuizBank";
+import StudentQuizCard from "../../components/StudentQuizCard";
 import Wrapper from "../../components/Wrapper";
 
 function Student (){
@@ -11,11 +10,11 @@ function Student (){
         return (
 
             <Wrapper>
-                <Header />
+                <Navbar />
                  <StudentSubject />
-                {/* <StudentQuizBank >
+                <StudentQuizBank >
                     <StudentQuizCard />
-                </StudentQuizBank> */} 
+                </StudentQuizBank>  
                 <Footer />
             </Wrapper>
 

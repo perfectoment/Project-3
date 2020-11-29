@@ -4,6 +4,7 @@ import Title from "../../components/Title";
 import SignInModal from "../../components/SignIn";
 import Wrapper from "../../components/Wrapper";
 import API from "../../utils/API"
+import Footer from "../../components/Footer"
 
 
 
@@ -73,6 +74,7 @@ function SignIn() {
                     handleInputTeacher={handleInputTeacher}
                     handleLoginSubmit={handleLoginSubmit}
                 />
+                <Footer/>
             </Wrapper>
 
         );

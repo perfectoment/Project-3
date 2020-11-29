@@ -1,62 +1,70 @@
-import React from "react";
-import "./style.css";
+import React from 'react'
 
+export default class CardCreator extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      question: '',
+      answer: ''
+    }
+    this.handleChange = this.handleChange.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
+  }
+  handleChange(e) {
+    if (e.target.name === 'question') {
+      this.setState({
+        question: e.target.value
+      })
+    }
+    if (e.target.name === 'answer') {
+      this.setState({
+        answer: e.target.value
+      })
+    }
+  }
+  handleSubmit(e) {
+    e.preventDefault()
+    const { question, answer } = this.state
+    this.setState({ question: '', answer: '' })
+    this.props.onSubmit({ question, answer })
 
-function MakeQuiz() {
+  }
 
+  render() {
+    const { question, answer } = this.state
     return (
+      <div className="card border-light text-center w-50 m-auto shadow-lg">
+        <div className="card-header p-5">Create a quiz</div>
+        <form className="card-body p-5" onSubmit={this.handleSubmit}>
+          <div className="form-group">
+            <label className="question">Question</label>
+            <input
+              required
+              type="text"
+              name="question"
+              className="form-control form-control-lg shadow-lg"
+              id="question"
+              value={question}
+              onChange={this.handleChange} />
+          </div>
+          <div className="form-group">
+            <label className="answer">Answer</label>
+            <input
+              required
+              type="text"
+              name="answer"
+              className="form-control form-control-lg shadow-lg"
+              id="answer"
+              value={answer}
+              onChange={this.handleChange} />
+            <button type="submit" className="btn btn-secondary btn-lg btn-block my-5 shadow-lg">Save</button>
+          </div>
+        </form>
+      </div>
+    )
+  }
 
-
-        <section className="container">
-            <div className="card" id="quizform">
-                <div className="card-body">
-                    <h5 className="card-title">MAKE QUIZ</h5>
-
-                    <form className="form-group" ref="">
-
-
-                        <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Subject
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" value ="math" href="#" onChange={(event) => props.handleMath(event)}>Math</a>
-                            <a class="dropdown-item" value ="science" href="#" onChange={(event) => props.handleScience(event)} >Science</a>
-                            <a class="dropdown-item" value="history" href="#"onChange={(event) => props.handleHistory(event)} >History</a>
-                        </div>
-                        </div>
-
-                        <label className="label">Input Question</label>
-                        <div className="input-group-text">
-                            <input required type="text" name="question" onChange={(event) => props.handleInputQuestion(event)} />
-                        </div>
-
-
-                        <label className="label">Wrong Answers</label>
-                        <div className="input-group-text">
-                            <input required type="text" name="answer1" onChange={(event) => props.handleInputAnswer1(event)} />
-                        </div>
-                        <div className="input-group-text">
-                            <input required type="text" name="answer2" onChange={(event) => props.handleInputAnswer2(event)} />
-                        </div>
-                        <div className="input-group-text">
-                            <input required type="text" name="answer3" onChange={(event) => props.handleInputAnswer3(event)}/>
-                        </div>
-
-                        <label className="label">Correct Answer</label>
-                        <div className="input-group-text">
-                            <input required type="text" name="correctAnswer" onChange={(event) => props.handleInputCorrect(event)}/>
-                        </div>
-
-                        <button className="btn btn-success" type="submit" onClick={(event) => props.handleSubmit(event)}>Create Quiz</button>
-
-                    </form>
-                </div>
-            </div>
-        </section >
-
-
-    );
 }
+// }
 
-export default MakeQuiz;
+// export default MakeQuiz;
