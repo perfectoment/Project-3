@@ -1,11 +1,16 @@
 body {
   text-align: center;
   background-image: url("./components/assets/kqbggif.gif");
-  position: fixed;
-  height: 100%;
+  position: relative;
+  height: 100vh;
   width: 100%;
   background-size: cover;
   z-index: 1;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
 
 }

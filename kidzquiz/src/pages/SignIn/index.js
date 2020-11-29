@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {useHistory} from 'react-router-dom'
 import Title from "../../components/Title";
 import SignInModal from "../../components/SignIn";
 import Wrapper from "../../components/Wrapper";
@@ -9,6 +10,7 @@ import API from "../../utils/API"
 // I think this is what we need
 
 function SignIn() {
+    let history = useHistory()
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [role, setRole] = useState("");
@@ -21,8 +23,15 @@ function SignIn() {
             password:password, 
             role:role}
         ).then(
-            console.log("working")
+            localStorage.setItem("user", role)
         )
+        
+            if(role==="student"){
+            history.push("/student")}
+            else if(role==="teacher"){
+                history.push("/teacher")
+            }
+
     }
     
      const handleInputEmail = event =>{
