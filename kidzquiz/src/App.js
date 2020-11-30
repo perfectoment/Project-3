@@ -17,6 +17,7 @@ class App extends Component {
     return (
       
       <BrowserRouter basename="/">
+         <Route path="/student" component={Student} />
       {/* <Navbar /> */}
       <Route exact path="/" component={SignIn} />
         {
