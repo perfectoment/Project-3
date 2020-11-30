@@ -9,6 +9,16 @@ function Student() {
 
     return (
 
+
+            <Wrapper>
+                <Header />
+                 <StudentSubject />
+                {/* <StudentQuizBank >
+                    <StudentQuizCard />
+                </StudentQuizBank> */}
+                <Footer />
+            </Wrapper>
+
         <Wrapper>
             <Header />
             <div className="container">
@@ -21,6 +31,7 @@ function Student() {
                     </div>
                 </div>
             </div>
+
 
 
 

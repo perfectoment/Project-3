@@ -1,7 +1,7 @@
 
 // import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-// import TakeQuiz from "../../components/TakeQuiz";
+import TakeQuiz from "../../components/TakeQuiz";
 import Wrapper from "../../components/Wrapper";
 
 function QuizTime() {
@@ -10,7 +10,7 @@ function QuizTime() {
 
             <Wrapper>
                 {/* <Header /> */}
-                {/* <TakeQuiz /> */}
+                <TakeQuiz />
                 <Footer />
             </Wrapper>
 
