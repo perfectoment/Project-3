@@ -34,6 +34,9 @@ export default {
     return axios.delete("/api/quiz/" + id);
   },
 
+  getAllQuizzes: function(){
+    return axios.get("/api/quiz")
+  },
 //logout
   logoutUser: function() {
     return axios.get("/logout");

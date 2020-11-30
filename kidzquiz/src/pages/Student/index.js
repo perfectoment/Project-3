@@ -4,6 +4,11 @@ import StudentSubject from "../../components/StudentSubject";
 import StudentQuizBank from "../../components/StudentQuizBank";
 // import StudentQuizCard from "../../components/StudentQuizCard";
 import Wrapper from "../../components/Wrapper";
+import API from "../../utils/API"
+import Quiztaker from "../../components/QuizTaker";
+
+
+
 
 function Student() {
 
@@ -14,7 +19,13 @@ function Student() {
             <div className="container">
                 <div className="row">
                     <div className="col-6">
-                        <StudentSubject />
+                        <Quiztaker 
+                        // id={id}
+                        // title={title}
+                        // subject={subject}
+                        // questiontext={questiontext}
+                        // answertext={answertext}
+                        />
                     </div>
                     <div className="col-6">
                         <StudentQuizBank />

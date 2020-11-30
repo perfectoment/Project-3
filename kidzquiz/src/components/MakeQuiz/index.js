@@ -19,9 +19,9 @@ function MakeQuiz(props) {
                                 Subject
                         </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <div class="dropdown-item" value="math" onChange={(event) => props.handleMath(event)}>Math</div>
-                                <div class="dropdown-item" value="science" onChange={(event) => props.handleScience(event)} >Science</div>
-                                <div class="dropdown-item" value="history" onChange={(event) => props.handleHistory(event)} >History</div>
+                                <div class="dropdown-item" value="math" onChange={(event) => props.handleSubject(event)}>Math</div>
+                                <div class="dropdown-item" value="science" onChange={(event) => props.handleSubject(event)} >Science</div>
+                                <div class="dropdown-item" value="history" onChange={(event) => props.handleSubject(event)} >History</div>
                             </div>
                         </div>
 
@@ -49,7 +49,7 @@ function MakeQuiz(props) {
 
                         <label className="label">Correct Answer</label>
                         <div className="input-group-text">
-                            <input required type="text" name="correctAnswer" onChange={(event) => props.handleInputQ1Correct(event)} />
+                            <input required type="text" name="correctAnswer" value ="correct" onChange={(event) => props.handleInputQ1Correct(event)} />
                         </div>
 
                         < hr />
@@ -73,7 +73,7 @@ function MakeQuiz(props) {
 
                         <label className="label">Correct Answer</label>
                         <div className="input-group-text">
-                            <input required type="text" name="correctAnswer" onChange={(event) => props.handleInputQ2Correct(event)} />
+                            <input required type="text" name="correctAnswer" value ="correct" onChange={(event) => props.handleInputQ2Correct(event)} />
                         </div>
 
                         < hr />
@@ -97,7 +97,7 @@ function MakeQuiz(props) {
 
                         <label className="label">Correct Answer</label>
                         <div className="input-group-text">
-                            <input required type="text" name="correctAnswer" onChange={(event) => props.handleInputQ3Correct(event)} />
+                            <input required type="text" name="correctAnswer" value="correct" onChange={(event) => props.handleInputQ3Correct(event)} />
                         </div>
 
                         < hr />
@@ -121,7 +121,7 @@ function MakeQuiz(props) {
 
                         <label className="label">Correct Answer</label>
                         <div className="input-group-text">
-                            <input required type="text" name="correctAnswer" onChange={(event) => props.handleInputQ4Correct(event)} />
+                            <input required type="text" name="correctAnswer" value ="correct" onChange={(event) => props.handleInputQ4Correct(event)} />
                         </div>
 
                         < hr />
@@ -145,7 +145,7 @@ function MakeQuiz(props) {
 
                         <label className="label">Correct Answer</label>
                         <div className="input-group-text">
-                            <input required type="text" name="correctAnswer" onChange={(event) => props.handleInputQ5Correct(event)} />
+                            <input required type="text" name="correctAnswer" value="correct" onChange={(event) => props.handleInputQ5Correct(event)} />
                         </div>
 
                         < hr />

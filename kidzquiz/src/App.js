@@ -17,15 +17,15 @@ class App extends Component {
     return (
       
       <BrowserRouter basename="/">
-         <Route path="/student" component={Student} />
       {/* <Navbar /> */}
       <Route exact path="/" component={SignIn} />
+       <Route path="/student" component={Student} /> 
         {
           localStorage.user === "student" ? 
           <>
           
-          <Route path="/student" component={Student} />
-          <Route path="/studentQuiz" component={QuizTime} />
+          {/* <Route path="/student" component={Student} /> */}
+          {/* <Route path="/studentQuiz" component={QuizTime} /> */}
           </>
           :
           <>

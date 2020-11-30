@@ -8,13 +8,18 @@ app.post("/api/login", passport.authenticate("local"), function(req, res) {
     res.json(req.user);
     });
     
-app.post("/api/signup", function(req, res) {
+app.post("/api/signup", async function(req, res) {
     db.User.create({
         email: req.body.email,
         password: req.body.password,
         role: req.body.role
-    })
-   console.log('HELLO')
+    }).on("success",
+     userId= await db.User.findOne({
+            where:{email:req.body.email}
+        }).then((user)=> user),
+    console.log(userId, 'ID')
+      )
+      
     res.send(req.body)
 })
     // .then(function() {
@@ -65,13 +70,12 @@ app.get("/api/user/:id", function(req, res){
     })
 })
 
-// app.get("/api/quiz/:subject", function(req, res){
-//     db.Quiz.findAll({where:{subject:req.body.subject}, 
-//     }).then(function(results){
-//         res.json(results)
-//     });
+app.get("/api/quiz/", function(req, res){
+    db.Quiz.findAll({}).then(function(results){
+        res.json(results)
+    });
 
-// });
+});
 
 app.get("/api/quiz/:id", function(req,res){
     db.Quiz.findAll({
