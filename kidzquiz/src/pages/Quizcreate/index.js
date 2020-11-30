@@ -42,7 +42,7 @@ function Quizcreate(){
         title:title,
      }).then(function(newQuiz){
          console.log(newQuiz)
-         setQuiz(newQuiz)
+         setQuiz(newQuiz.data)
      }
          
      )
