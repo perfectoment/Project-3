@@ -18,18 +18,20 @@ class App extends Component {
       
       <BrowserRouter basename="/">
 
-      <Route path="/quiz" component={QuizTime} />
 
          <Route path="/student" component={Student} />
 
       {/* <Navbar /> */}
       <Route exact path="/" component={SignIn} />
+       <Route path="/student" component={Student} /> 
         {
           localStorage.user === "student" ? 
           <>
           
+
           <Route path="/student" component={Student} />
           {/* <Route path="/quiz" component={QuizTime} /> */}
+
           </>
           :
           <>

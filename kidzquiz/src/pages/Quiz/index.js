@@ -10,7 +10,9 @@ function QuizTime() {
 
             <Wrapper>
                 {/* <Header /> */}
+
                 <TakeQuiz />
+
                 <Footer />
             </Wrapper>
 

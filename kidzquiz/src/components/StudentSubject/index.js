@@ -17,17 +17,17 @@ function StudentSubject(props) {
 
                 <h3 className="text-light">MATH</h3>
                 <div className="StudentQuizList">
-                    <img className="subject div-thumbnail" value="Math" onClick={(event) => props.sortSubject(event)} src={Maths} alt="Math"></img>
+                    <img className="subject div-thumbnail" value="math" onClick={(event) => props.sortSubject(event)} src={Maths} alt="Math"></img>
                 </div><br />
 
                 <h3 className="text-light">SPELLING</h3>
                 <div className="StudentQuizList">
-                    <img className="subject div-thumbnail" value="Spelling" onClick={(event) => props.sortSubject(event)} src={Spelling} alt="Spelling"></img>
+                    <img className="subject div-thumbnail" value="spelling" onClick={(event) => props.sortSubject(event)} src={Spelling} alt="Spelling"></img>
                 </div><br />
 
                 <h3 className="text-light">HISTORY</h3>
                 <div className="StudentQuizList">
-                    <img className="subject div-thumbnail" value="World" onClick={(event) => props.sortSubject(event)} src={World} alt="World"></img>
+                    <img className="subject div-thumbnail" value="world" onClick={(event) => props.sortSubject(event)} src={World} alt="World"></img>
                 </div>
             </div>
         </main>

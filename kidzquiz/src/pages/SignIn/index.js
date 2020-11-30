@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {useHistory} from 'react-router-dom'
+import {useHistory} from "react-router-dom"
 import Title from "../../components/Title";
 import SignInModal from "../../components/SignIn";
 import Wrapper from "../../components/Wrapper";
@@ -10,11 +10,10 @@ import API from "../../utils/API"
 // I think this is what we need
 
 function SignIn() {
-    let history = useHistory()
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [role, setRole] = useState("");
-
+   const history = useHistory()
 
     const handleSubmit = event =>{
         event.preventDefault()
@@ -25,13 +24,12 @@ function SignIn() {
         ).then(
             localStorage.setItem("user", role)
         )
-        
             if(role==="student"){
             history.push("/student")}
             else if(role==="teacher"){
                 history.push("/teacher")
             }
-
+        
     }
     
      const handleInputEmail = event =>{
@@ -79,3 +77,5 @@ function SignIn() {
     }
 
 export default SignIn;
+
+//FUCK FUCK FUCK FUCK FUCK FUCKK FUCK
