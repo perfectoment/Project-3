@@ -11,8 +11,8 @@ function SignInModal(props, handleSubmit) {
 
   return (
 
-    <div className="conatiner">
-      <button className="btn btn-success btn-circle btn-xl" onClick={() => setModalIsOpen(true)}>START</button>
+    <div className="container">
+      <button className="btn btn-success btn-hover btn-lg" onClick={() => setModalIsOpen(true)}>START</button>
 
       <Modal id="Modal" isOpen={modalIsOpen} shouldCloseOnOverlayClick={false} onRequestClose={() => setModalIsOpen(false)}>
 

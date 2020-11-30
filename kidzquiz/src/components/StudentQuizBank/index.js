@@ -7,8 +7,6 @@ function StudentQuizBank(props) {
 
     return (
 
-
-
         <section className="container" id="teachcont">
             <div className="card" id="meow">
                 <div className="card-body">
