@@ -9,24 +9,32 @@ import TeacherQuizBank from "../../components/TeacherQuizBank";
 function Teacher() {
 
 
-        return (
 
-            <Wrapper>
-                <Header />
-                <div className="container">
+    return (
+
+        <Wrapper>
+            <Header />
+            <div className="container">
                 <div className="row">
-                <MakeQuiz />
+                    <div className="col-6">
+                        <MakeQuiz />
+                    </div>
+                    <div className="col-6">
+                        <TeacherQuizBank />
+                    </div>
                 </div>
-                <div className="row">
-                <TeacherQuizBank />
-                </div>
-                </div>
+
             </Wrapper>
 
-        );
-    }
+            </div>
+
+
+
+
+        </Wrapper>
+
+    );
+}
 
 
 export default Teacher;
-
-{/* <TeacherQuizCard /> */}

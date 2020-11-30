@@ -16,8 +16,6 @@ function StudentQuizCard(props) {
             
             <img className="card-img-top" src={props.icon} alt={`${props.title}`}/>    
             </div>
-
-            <button className="delete">DELETE</button>
     
         </div>
 

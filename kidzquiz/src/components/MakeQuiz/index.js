@@ -7,7 +7,7 @@ function MakeQuiz(props) {
     return (
 
 
-        <section className="container">
+        <section className="container" id="quizcontain">
             <div className="card" id="quizform">
                 <div className="card-body">
                     <h5 className="card-title">MAKE A QUIZ</h5>
