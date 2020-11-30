@@ -1,14 +1,11 @@
-import React from 'react';
 import "./style.css";
-
+import React from "react";
  
 
 function TakeQuiz(props) {
 
-    // const [questions, setQuestions] = useState([]);
         
     return (
-        
         
         <div className="container">
             <div className="bg-white text-purple-800 p-10 rounded-lg shadow-md">
@@ -23,13 +20,12 @@ function TakeQuiz(props) {
             <button className="big-white w-2/5 p-4 text-purple-800"> {props.answertext} </button>
             </div>
         </div>
-        
-        
-        
-        
-    )
 
-    };
+     
+    )};
+
+
+
 
 export default TakeQuiz;
 
