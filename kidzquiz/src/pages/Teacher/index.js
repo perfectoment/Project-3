@@ -4,10 +4,12 @@ import Quizcreate from "../Quizcreate"
 
 
 function Teacher(){
+
+
+
 return(
 
     <Quizcreate/>
-
 
 )
 }

@@ -1,6 +1,10 @@
 import React from "react"
 import {useState} from "react"
 import API from "../../utils/API";
+import {Link} from "react-router-dom"
+
+
+
 
 
 function Quizcreate(){
@@ -8,6 +12,7 @@ function Quizcreate(){
  const [subject, setSubject]= useState("");
  const [title, setTitle]= useState("");
  const[description, setDescription]= useState("")
+ const[quiz, setQuiz]=useState({});
 
  const handleSubject = event =>{
      console.log("event.target")
@@ -35,8 +40,9 @@ function Quizcreate(){
         subject:subject,
         description:description,
         title:title,
-     }).then(function(res){
-         console.log(res)
+     }).then(function(newQuiz){
+         console.log(newQuiz)
+         setQuiz(newQuiz)
      }
          
      )
@@ -64,7 +70,18 @@ return(
                     <input required type="text" name="question" onChange={(event) => handleInputDescriptionQuiz(event)} />
                 </div>
                 <button className="btn" onClick={handleQuizSubmit}>Create Quiz</button>
-
+                {quiz.id ? (
+                <div>YOU JUST MADE A QUIZ CALLED {quiz.title}
+                <p></p>
+                <Link to={"/questionmaker/" + quiz.id}>
+                <button type="button">
+                     Make Some Questions
+                </button>
+                </Link>
+                </div> 
+                    ) : (
+                    console.log("chump")
+                    )}
 
     </div>
 
@@ -77,3 +94,6 @@ return(
 }
 
 export default Quizcreate
+
+
+

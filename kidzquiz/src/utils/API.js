@@ -16,8 +16,8 @@ export default {
     
   },
   // Create Questions
-  createQuestion: function(id) {
-    return axios.post("/api/question/" + id);
+  createQuestion: function(questionObject) {
+    return axios.post("/api/question/", questionObject);
   },
   //Creates answers
   createAnswer: function(id) {
