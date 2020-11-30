@@ -10,12 +10,14 @@ export default {
     return axios.post("/api/login");
   },
   // Deletes the book with the given id
-  createQuiz: function() {
-    return axios.post("/api/user/quiz");
+  createQuiz: function(quizObject) {
+    console.log("wtf")
+    return axios.post("/api/user/quiz",quizObject);
+    
   },
   // Create Questions
-  createQuestion: function(id) {
-    return axios.post("/api/question/" + id);
+  createQuestion: function(questionObject) {
+    return axios.post("/api/question/", questionObject);
   },
   //Creates answers
   createAnswer: function(id) {

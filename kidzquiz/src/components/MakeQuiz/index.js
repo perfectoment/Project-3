@@ -32,7 +32,7 @@ function MakeQuiz(props) {
 
                         <label className="label">Input Question 1</label>
                         <div className="input-group-text">
-                            <input required type="text" name="question" onChange={(event) => props.handleInputQ1(event)} />
+                            <input required type="text" id="2" name="question" onChange={(event) => props.handleInputQ1(event)} />
                         </div>
 
 

@@ -3,6 +3,7 @@ import SignIn from "../src/pages/SignIn"
 import Student from "../src/pages/Student"
 import QuizTime from "./pages/Quiz"
 import Teacher from "../src/pages/Teacher"
+import QuestionCreate from "../src/pages/QuestionCreate"
 
 
 import {
@@ -23,20 +24,22 @@ class App extends Component {
 
       {/* <Navbar /> */}
       <Route exact path="/" component={SignIn} />
-       <Route path="/student" component={Student} /> 
+       
         {
           localStorage.user === "student" ? 
           <>
           
 
-          <Route path="/student" component={Student} />
-          {/* <Route path="/quiz" component={QuizTime} /> */}
+          
+          <Route path="/student" component={Student} /> 
+          
 
           </>
           :
           <>
         
           <Route path="/teacher" component={Teacher} />
+          <Route exact path="/questions/:id" component={QuestionCreate} />
           </>
         }
           {/* {/* <Route exact path="/" component={SignIn} />

@@ -8,19 +8,18 @@ app.post("/api/login", passport.authenticate("local"), function(req, res) {
     res.json(req.user);
     });
     
-app.post("/api/signup", async function(req, res) {
+app.post("/api/signup", function(req, res) {
     db.User.create({
         email: req.body.email,
         password: req.body.password,
         role: req.body.role
-    }).on("success",
-     userId= await db.User.findOne({
-            where:{email:req.body.email}
-        }).then((user)=> user),
-    console.log(userId, 'ID')
-      )
+    }).then(function(newUser){
+        console.log(newUser)
+        res.json(newUser)
+    })
       
-    res.send(req.body)
+      
+    // res.send(req.body)
 })
     // .then(function() {
     //     console.log('WORKING')
@@ -31,14 +30,15 @@ app.post("/api/signup", async function(req, res) {
     // })
  
 app.post("/api/user/quiz", function(req, res){
+    console.log("HITS A HIT")
     db.Quiz.create({
         title: req.body.title,
         subject: req.body.subject,
-        description: req.body.description,
-        UserId: req.user.id
+        description: req.body.description
+        // UserId: req.user.id
         
     }).then(function(results){
-        console.log(results)
+        console.log("!!!!!!!!")
         res.json(results)
     })
 }); 
