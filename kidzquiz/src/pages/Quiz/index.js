@@ -1,5 +1,5 @@
 
-// import Header from "../../components/Header";
+import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 // import TakeQuiz from "../../components/TakeQuiz";
 import Wrapper from "../../components/Wrapper";
@@ -9,7 +9,7 @@ function QuizTime() {
         return (
 
             <Wrapper>
-                {/* <Header /> */}
+                <Header />
                 {/* <TakeQuiz /> */}
                 <Footer />
             </Wrapper>

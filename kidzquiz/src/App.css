@@ -7,10 +7,10 @@ body {
   background-size: cover;
   z-index: 1;
   background-repeat: no-repeat;
-  display: flex;
-  flex-direction: left;
-  /* align-items: center; */
-  /* justify-content: center; */
+  /* display: flex; */
+  /* flex-direction: center; */
+  align-items: center;
+  justify-content: center;
 
 }
 
