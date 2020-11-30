@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import SignIn from "../src/pages/SignIn"
-import Student from "../src/pages/Student"
+// import Student from "../src/pages/Student"
 import QuizTime from "./pages/Quiz"
 import Teacher from "../src/pages/Teacher"
 import QuestionCreate from "../src/pages/QuestionCreate"
@@ -20,7 +20,7 @@ class App extends Component {
       <BrowserRouter basename="/">
 
 
-         <Route path="/student" component={Student} />
+         {/* <Route path="/student" component={Student} /> */}
 
       {/* <Navbar /> */}
       <Route exact path="/" component={SignIn} />
@@ -31,7 +31,7 @@ class App extends Component {
           
 
           
-          <Route path="/student" component={Student} /> 
+          {/* <Route path="/student" component={Student} />  */}
           
 
           </>
@@ -39,7 +39,7 @@ class App extends Component {
           <>
         
           <Route path="/teacher" component={Teacher} />
-          <Route exact path="/questions/:id" component={QuestionCreate} />
+          <Route exact path="/questionmaker/:id" component={QuestionCreate} />
           </>
         }
           {/* {/* <Route exact path="/" component={SignIn} />
