@@ -1,50 +1,31 @@
-import React from "react";
-import React, { useState } from 'react';
 import "./style.css";
+import React from "react";
+ 
 
-export default function App() {
+function TakeQuiz(props) {
 
-    const [currentQuestion, setCurrentQuestion] = useState(0);
-    const [showScore, setShowScore] = useState(false);
-    const [score, setScore] = useState(0);
-
-    const handleAnswerOptionClick = (isCorrect) => {
-        if (isCorrect) {
-            setScore(score + 1);
-        }
-
-        const nextQuestion = currentQuestion + 1;
-        if (nextQuestion < questions.length) {
-            setCurrentQuestion(nextQuestion);
-        } else {
-            setShowScore(true);
-        }
-    };
+        
     return (
-        <div className='app'>
-            {showScore ? (
-                <div className='score-section'>
-                    You scored {score} out of {questions.length}
-                </div>
-            ) : (
-                <>
-                    <div className='question-section'>
-                        <div className='question-count'>
-                            <span>Question {currentQuestion + 1}</span>/{questions.length}
-                        </div>
-                        <div className='question-text'>{questions[currentQuestion].questionText}</div>
-                    </div>
-                    <div className='answer-section'>
-                        {questions[currentQuestion].answerOptions.map((answerOption) => (
-                            <button onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
-                        ))}
-                    </div>
-                </>
-            )}
+        
+        <div className="container">
+            <div className="bg-white text-purple-800 p-10 rounded-lg shadow-md">
+                <h2 className="text-2xl">
+                    {props.questiontext}
+                </h2>
+            </div>
+            <div className="flex flex-wrap mt-4 justify-around">
+            <button className="big-white w-2/5 p-4 text-purple-800"> {props.answertext} </button>
+            <button className="big-white w-2/5 p-4 text-purple-800"> {props.answertext} </button>
+            <button className="big-white w-2/5 p-4 text-purple-800"> {props.answertext} </button>
+            <button className="big-white w-2/5 p-4 text-purple-800"> {props.answertext} </button>
+            </div>
         </div>
-    );
+
+     
+    )};
 
 
-}
+
 
 export default TakeQuiz;
+

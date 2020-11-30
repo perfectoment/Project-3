@@ -56,6 +56,7 @@ const handleInputQ1Correct = event =>{
     
 
 
+
     return (
 
         <Wrapper>
@@ -74,7 +75,11 @@ const handleInputQ1Correct = event =>{
                         <TeacherQuizBank />
                     </div>
                 </div>
+
+            </Wrapper>
+
             </div>
+
 
 
 
@@ -85,5 +90,3 @@ const handleInputQ1Correct = event =>{
 
 
 export default Teacher;
-
-{/* <TeacherQuizCard /> */ }
