@@ -9,6 +9,7 @@ import TeacherQuizBank from "../../components/TeacherQuizBank";
 function Teacher() {
 
 
+
     return (
 
         <Wrapper>
@@ -33,5 +34,3 @@ function Teacher() {
 
 
 export default Teacher;
-
-{/* <TeacherQuizCard /> */ }
