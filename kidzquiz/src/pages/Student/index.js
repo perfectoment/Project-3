@@ -14,7 +14,7 @@ function Student (){
                  <StudentSubject />
                 {/* <StudentQuizBank >
                     <StudentQuizCard />
-                </StudentQuizBank> */} 
+                </StudentQuizBank> */}
                 <Footer />
             </Wrapper>
 

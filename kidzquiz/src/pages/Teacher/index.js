@@ -21,9 +21,6 @@ function Teacher() {
                 <TeacherQuizBank />
                 </div>
                 </div>
-                   
-        
-        
             </Wrapper>
 
         );
