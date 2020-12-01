@@ -60,10 +60,12 @@ app.post("/api/answer/:id", function(req,res){
     const array =[]
     req.body.forEach(answer => {
         db.Answer.create({
+           AnswerId: answer.id,
             answertext: answer.answertext,
             correct: answer.correct,
             QuestionId: req.params.id
         }).then(function(result){
+            console.log(result)
             array.push(result)
         }).catch(err => {
             console.log(err)
@@ -84,7 +86,9 @@ app.get("/api/quiz/", function(req, res){
     db.Quiz.findAll({})
     .then(function(results){
         res.json(results)
-    });
+    }).catch(err =>{
+        console.log(err)
+    })
 
 });
 
@@ -109,7 +113,9 @@ app.get("/api/quiz/:id", function(req,res){
 
     }).then(function(results){
         res.json(results)
-    });   
+    }).catch(err =>{
+        console.log(err)
+    }) 
 });
 
 

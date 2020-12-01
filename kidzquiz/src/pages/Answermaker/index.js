@@ -7,7 +7,7 @@ import {Link} from "react-router-dom"
 
 function Answermaker(props){
 
-  const [answertext, setAnswertext] = useState([{}])
+  
   const [answers, setAnswers] = useState([{}])
 
 
@@ -16,7 +16,7 @@ function Answermaker(props){
       event.preventDefault()
     API.createAnswer([
         {answertext:event.target.elements.answer1.value,
-        correct:false
+        correct:false,
         },
         {answertext:event.target.elements.answer2.value,
          correct:false   
@@ -42,7 +42,7 @@ return(
 
 <div className="container">
     <form className="form" id="answerform" onSubmit={handleAnswer}>
-    <label className="label">Wrong Answers</label>
+    <label className="label font size">Please Enter Your Incorrect Answers Below</label>
         <div className="input-group-text">
             <input required type="text" id="answer1" name="answer1"/>
         </div>
@@ -53,11 +53,11 @@ return(
             <input required type="text" id="answer3" name="answer3"/>
         </div>
 
-        <label className="label">Correct Answer</label>
+        <label className="label font size">Please Enter The Correct Answer</label>
         <div className="input-group-text">
             <input required type="text" id="correct" name="correctAnswer" />
         </div>
-            <button >Sumbit Answers</button>
+            <button className="green font size" >Submit Answers</button>
             </form>  
         < hr />
         {answers.id ? (
