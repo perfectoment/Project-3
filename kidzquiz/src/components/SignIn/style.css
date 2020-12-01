@@ -42,8 +42,7 @@ input:focus {
 }
 
 #dataform {
-  background-color: rgb(194, 237, 86);
-
+  background-color: rgba(91, 220, 71, 0.509);
   border-radius: 4px;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;

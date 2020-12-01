@@ -1,43 +1,47 @@
+import React, { useEffect, useState }  from "react";
 import Header from "../../components/Navbar";
 import Footer from "../../components/Footer";
 // import StudentSubject from "../../components/StudentSubject";
 import StudentQuizBank from "../../components/StudentQuizBank";
-// import StudentQuizCard from "../../components/StudentQuizCard"
+import StudentQuizCard from "../../components/StudentQuizCard"
 import Wrapper from "../../components/Wrapper";
-// import API from "../../utils/API"
+import API from "../../utils/API"
 // import Quiztaker from "../../components/QuizTaker";
 
 
 
 
-// function Student() {
+function Student(props) {
 
-//     return (
+    const [result, setResult] = useState([]);
+
+    useEffect((id) => {
+        API.getAllQuizzes()
+            .then(data => {
+                setResult(data.data);
+            })
+    })
+
+    return (
+        <Wrapper>
+            <Header />
+            <StudentQuizBank>
+
+                {result.map(quiz => (
+                    <StudentQuizCard
+                        id={quiz.id}
+                        subject={quiz.subject}
+                        title={quiz.title}
+                        description={quiz.description}
+                    />
+
+                ))}
+
+            </StudentQuizBank>
+            <Footer />
+        </Wrapper>
+    );
+}
 
 
-
-       <Wrapper>
-        <Header />
-           <div className="container">
-               <div className="row">
-    
-                   <div className="col-12">
-                      <StudentQuizBank />
-                  </div>
-              </div>
-           </div>
-
-
-
-
-
-//             <Footer />
-//         </Wrapper>
-
-//     );
-// }
-
-
-// export default Student;
-
-{/* <StudentQuizCard /> */ }
+export default Student;
