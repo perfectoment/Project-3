@@ -71,15 +71,15 @@ return(
                 </>
                      : 
                      <>
-                     <div>DO YOU WANT TO MAKE ANOTHER QUESTION?
+                     <div className="font size alert">DO YOU WANT TO MAKE ANOTHER QUESTION?
                 <p></p>
                 <Link to={"/questionmaker/" + props.match.params.id}>
-                <button type="button">
+                <button className="green" type="button">
                      Make Another Question
                 </button>
                 </Link>
                 <Link to={"/"}>
-                <button type="button">
+                <button className="green" type="button">
                      Quit
                 </button>
                 </Link>

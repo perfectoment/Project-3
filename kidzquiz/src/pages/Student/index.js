@@ -16,7 +16,7 @@ function Student(props) {
     const [result, setResult] = useState([]);
 
     useEffect((id) => {
-        API.getAllQuizzes()
+        API.getAllQuizzes({})
             .then(data => {
                 setResult(data.data);
             })

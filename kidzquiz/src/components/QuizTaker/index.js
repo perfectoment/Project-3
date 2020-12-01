@@ -11,106 +11,29 @@ function Quiztaker(props) {
                 <div className="card-body">
                     <h1 className="card-title">{props.title}</h1>
                     <h2 className="subjecttitle">Subject: {props.subject}</h2>
-                    <h2 className ="score card">Your Score: {props.score}/5</h2>
                     <form className="form-group">
 
 
-                        <label className="label">{props.questiontext[0]}</label>
+                        <label className="label">{props.questiontext}</label>
                         <div className="input-group-text">
                         </div>
 
-                        <h3 className="answer1"  onClick={(event) => props.handleInputQ1A1(event)}>
-                            {props.question[0].answertext[0]}
-                        </h3>
-                        <h3 className="answer2" onClick={(event) => props.handleInputQ1A2(event)} >
-                            {props.question[0].answertext[1]}
-                        </h3>
-                        <h3 className="answer3" onClick={(event) => props.handleInputQ1A3(event)}>
-                            {props.question[0].answertext[2]}
-                        </h3>
+                        <button className="answer1"  onClick={(event) => props.handleClickW1(event)}>
+                            {props.question.answertext[0]}
+                        </button>
+                        <button className="answer2" onClick={(event) => props.handleClickW2(event)} >
+                            {props.question.answertext[1]}
+                        </button>
+                        <button className="answer3" onClick={(event) => props.handleClickW3(event)}>
+                            {props.question.answertext[2]}
+                        </button>
 
-                        <h3 className="answer4" value="correct" onClick={(event) => props.handleInputQ1Correct(event)}>
-                            {props.question[0].answertext[3]}
-                        </h3>
-
-                        < hr />
-
-                        <label className="label">{props.questiontext[1]}</label>
-                        <div className="input-group-text">
-                        </div>
-
-                        <h3 className="answer1"  onClick={(event) => props.handleInputQ1A2(event)}>
-                            {props.answertext[0]}
-                        </h3>
-                        <h3 className="answer2" onClick={(event) => props.handleInputQ1A2(event)} >
-                            {props.answertext[1]}
-                        </h3>
-                        <h3 className="answer3" onClick={(event) => props.handleInputQ1A3(event)}>
-                            {props.answertext[2]}
-                        </h3>
-
-                        <h3 className="answer4" value="correct" onClick={(event) => props.handleInputQ1Correct(event)}>
-                            {props.answertext[3]}
-                        </h3>
+                        <button className="answer4" value="correct" onClick={(event) => props.handleClickCorrect(event)}>
+                            {props.question.answertext[3]}
+                        </button>
 
                         < hr />
-                        <label className="label">{props.questiontext[2]}</label>
-                        <div className="input-group-text">
-                        </div>
 
-                        <h3 className="answer1"  onClick={(event) => props.handleInputQ1A1(event)}>
-                            {props.answertext[0]}
-                        </h3>
-                        <h3 className="answer2" onClick={(event) => props.handleInputQ1A2(event)} >
-                            {props.answertext[1]}
-                        </h3>
-                        <h3 className="answer3" onClick={(event) => props.handleInputQ1A3(event)}>
-                            {props.answertext[2]}
-                        </h3>
-
-                        <h3 className="answer4" value="correct" onClick={(event) => props.handleInputQ1Correct(event)}>
-                            {props.answertext[3]}
-                        </h3>
-
-                        < hr />
-                        <label className="label">{props.questiontext[3]}</label>
-                        <div className="input-group-text">
-                        </div>
-
-                        <h3 className="answer1"  onClick={(event) => props.handleInputQ1A1(event)}>
-                            {props.answertext[0]}
-                        </h3>
-                        <h3 className="answer2" onClick={(event) => props.handleInputQ1A2(event)} >
-                            {props.answertext[1]}
-                        </h3>
-                        <h3 className="answer3" onClick={(event) => props.handleInputQ1A3(event)}>
-                            {props.answertext[2]}
-                        </h3>
-
-                        <h3 className="answer4" value="correct" onClick={(event) => props.handleInputQ1Correct(event)}>
-                            {props.answertext[3]}
-                        </h3>
-
-                        < hr />
-                        <label className="label">{props.questiontext[4]}</label>
-                        <div className="input-group-text">
-                        </div>
-
-                        <h3 className="answer1"  onClick={(event) => props.handleInputQ1A1(event)}>
-                            {props.answertext[0]}
-                        </h3>
-                        <h3 className="answer2" onClick={(event) => props.handleInputQ1A2(event)} >
-                            {props.answertext[1]}
-                        </h3>
-                        <h3 className="answer3" onClick={(event) => props.handleInputQ1A3(event)}>
-                            {props.answertext[2]}
-                        </h3>
-
-                        <h3 className="answer4" value="correct" onClick={(event) => props.handleInputQ1Correct(event)}>
-                            {props.answertext[3]}
-                        </h3>
-
-                        < hr />
 
                     </form>
                 </div>
