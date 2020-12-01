@@ -31,6 +31,7 @@ function Answermaker(props){
         props.match.params.id
     ).then(function(data){
         console.log("sumbit")
+        console.log(data)
         setAnswers(data.data)
 
     })
@@ -60,9 +61,17 @@ return(
             <button className="green font size" >Submit Answers</button>
             </form>  
         < hr />
-        {answers.id ? (
+        {
+            console.log(answers),
+        
+        answers === [] ? 
                 <>
-                <div>DO YOU WANT TO MAKE ANOTHER QUESTION?
+                {console.log("champion")}
+               
+                </>
+                     : 
+                     <>
+                     <div>DO YOU WANT TO MAKE ANOTHER QUESTION?
                 <p></p>
                 <Link to={"/questionmaker/" + props.match.params.id}>
                 <button type="button">
@@ -75,10 +84,9 @@ return(
                 </button>
                 </Link>
                 </div> 
-                </>
-                    ) : (
-                    console.log("chump")
-                    )}
+
+                    </>
+                    }
                 </div>
                     
 
