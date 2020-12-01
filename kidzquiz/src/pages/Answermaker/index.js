@@ -1,15 +1,39 @@
 import React from "react"
 import {useState} from "react"
+import API from "../../utils/API"
+import {Link} from "react-router-dom"
 
 
 
-function Answermaker(){
+function Answermaker(props){
 
   const [answertext, setAnswertext] = useState([{}])
+  const [answers, setAnswers] = useState([{}])
 
 
-  const handleAnswer = () =>{
-    console.log("hello")
+  const handleAnswer = (event) =>{
+      console.log(event)
+      event.preventDefault()
+    API.createAnswer([
+        {answertext:event.target.elements.answer1.value,
+        correct:false
+        },
+        {answertext:event.target.elements.answer2.value,
+         correct:false   
+        },
+        {answertext:event.target.elements.answer3.value,
+        correct:false   
+        },
+        {answertext:event.target.elements.correct.value,
+         correct:true   
+        },
+    ],
+        props.match.params.id
+    ).then(function(data){
+        console.log("sumbit")
+        setAnswers(data.data)
+
+    })
   }
 
 
@@ -17,29 +41,48 @@ function Answermaker(){
 return(
 
 <div className="container">
-
+    <form className="form" id="answerform" onSubmit={handleAnswer}>
     <label className="label">Wrong Answers</label>
         <div className="input-group-text">
-            <input required type="text" name="answer1" />
+            <input required type="text" id="answer1" name="answer1"/>
         </div>
         <div className="input-group-text">
-            <input required type="text" name="answer2"/>
+            <input required type="text" id="answer2" name="answer2"/>
         </div>
         <div className="input-group-text">
-            <input required type="text" name="answer3" />
+            <input required type="text" id="answer3" name="answer3"/>
         </div>
 
         <label className="label">Correct Answer</label>
         <div className="input-group-text">
-            <input required type="text" name="correctAnswer" value ="correct" />
+            <input required type="text" id="correct" name="correctAnswer" />
         </div>
-            <button onSubmit={handleAnswer}>TEXT TEXT</button>
-            
+            <button >Sumbit Answers</button>
+            </form>  
         < hr />
+        {answers.id ? (
+                <>
+                <div>DO YOU WANT TO MAKE ANOTHER QUESTION?
+                <p></p>
+                <Link to={"/questionmaker/" + props.match.params.id}>
+                <button type="button">
+                     Make Another Question
+                </button>
+                </Link>
+                <Link to={"/"}>
+                <button type="button">
+                     Quit
+                </button>
+                </Link>
+                </div> 
+                </>
+                    ) : (
+                    console.log("chump")
+                    )}
+                </div>
+                    
 
 
-
-</div>
 
 
 

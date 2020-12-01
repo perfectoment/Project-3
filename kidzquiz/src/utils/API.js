@@ -17,11 +17,11 @@ export default {
   },
   // Create Questions
   createQuestion: function(questionObject) {
-    return axios.post("/api/question/", questionObject);
+    return axios.post("/api/question/" + questionObject.QuizId, questionObject);
   },
   //Creates answers
-  createAnswer: function(id) {
-    return axios.post("/api/answer/" + id);
+  createAnswer: function(answerObject, QuestionId) {
+    return axios.post("/api/answer/" + QuestionId, answerObject);
   },
   //Gets quizzes by user
   getUserQuiz: function(id) {

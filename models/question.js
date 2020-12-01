@@ -6,6 +6,7 @@ module.exports = function(sequelize, DataTypes) {
       },
       questiontitle: {
         type: DataTypes.STRING,
+        defaultValue:"title"
       
       },
      

@@ -50,17 +50,27 @@ app.post("/api/question/:id", function(req, res){
 
     }).then(function(results){
         res.json(results)
-    });
+        console.log(results)
+    }).catch(err => {
+        console.log(err)
+    }) 
 });
 
 app.post("/api/answer/:id", function(req,res){
-    db.Answer.create({
-        answertext: req.body.answertext,
-        correct: req.body.correct,
-        QuestionId: req.params.id
-    }).then(function(results){
-        res.json(results)
-    });
+    const array =[]
+    req.body.forEach(answer => {
+        db.Answer.create({
+            answertext: answer.answertext,
+            correct: answer.correct,
+            QuestionId: req.params.id
+        }).then(function(result){
+            array.push(result)
+        }).catch(err => {
+            console.log(err)
+        })
+
+    }) 
+    res.json(array)
 }); 
 
 app.get("/api/user/:id", function(req, res){
@@ -71,7 +81,8 @@ app.get("/api/user/:id", function(req, res){
 })
 
 app.get("/api/quiz/", function(req, res){
-    db.Quiz.findAll({}).then(function(results){
+    db.Quiz.findAll({})
+    .then(function(results){
         res.json(results)
     });
 
