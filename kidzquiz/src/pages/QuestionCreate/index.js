@@ -6,7 +6,7 @@ import {useState} from "react"
 
 
 function QuestionCreate(props){
-
+    console.log(props)
     const [questiontext, setQuestionText]= useState("");
     const[question, setQuestion]=useState({});
 
@@ -22,7 +22,7 @@ function QuestionCreate(props){
             questiontext:questiontext,
             QuizId:props.match.params.id
         }).then(function(newQuestion){
-            setQuestion(newQuestion)
+            setQuestion(newQuestion.data)
         })
     }
 
@@ -38,7 +38,7 @@ function QuestionCreate(props){
                 {question.id ? (
                 <div>YOU JUST MADE A NEW QUESTION
                 <p></p>
-                <Link to={"/answermaker/" + props.match.params.id +"/" + question.id}>
+                <Link to={"/answermaker/" + question.id +"/" + props.match.params.id}>
                 <button type="button">
                      Make Some Possible Answers
                 </button>
