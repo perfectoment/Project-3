@@ -30,16 +30,16 @@ function QuestionCreate(props){
 
     return(
         <div className="container">
-            <label className="label">Please Create a Question</label>
+            <label className="label font size">What Would You Like To Ask?</label>
                 <div className="input-group-text">
-                    <input required type="text" id="2" name="question" onChange={(event) => handleQtitle(event)} />
+                    <input required className="wide" type="text" id="2" name="question" onChange={(event) => handleQtitle(event)} />
                 </div>
-                <button className="btn" onClick={handleQSubmit}>Create Question</button>
+                <button className="btn font alert green" onClick={handleQSubmit}>Create Question</button>
                 {question.id ? (
-                <div>YOU JUST MADE A NEW QUESTION
+                <div className="font size alert">YOU JUST MADE A NEW QUESTION!
                 <p></p>
                 <Link to={"/answermaker/" + question.id +"/" + props.match.params.id}>
-                <button type="button">
+                <button type="button" className="btn-primary">
                      Make Some Possible Answers
                 </button>
                 </Link>

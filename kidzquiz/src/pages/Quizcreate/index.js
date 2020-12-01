@@ -2,6 +2,7 @@ import React from "react"
 import {useState} from "react"
 import API from "../../utils/API";
 import {Link} from "react-router-dom"
+import "./style.css"
 
 
 
@@ -52,29 +53,29 @@ return(
 
     <div className="container">
         <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Subject
+                <button className="btn btn-success dropdown-toggle font" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                   Choose a Subject!
             </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <div class="dropdown-item" value="math" onChange={handleSubject}>Math</div>
-                    <div class="dropdown-item" value="science" onChange={handleSubject} >Science</div>
-                    <div class="dropdown-item" value="history" onChange={handleSubject} >History</div>
+                <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <div className="dropdown-item" value="math" onChange={handleSubject}>Math</div>
+                    <div className="dropdown-item" value="science" onChange={handleSubject} >Science</div>
+                    <div className="dropdown-item" value="history" onChange={handleSubject} >History</div>
                 </div>
             </div>
-            <label className="label">Name Quiz</label>
-                <div className="input-group-text">
+            <label className="label font">Name Your Quiz!</label>
+                <div className="input-group-text input">
                     <input required type="text" name="question" onChange={(event) => handleInputNameQuiz(event)} />
                 </div>
-                <label className="label">Add Description</label>
-                <div className="input-group-text">
+                <label className="label font">Add Description!</label>
+                <div className="input-group-text input">
                     <input required type="text" name="question" onChange={(event) => handleInputDescriptionQuiz(event)} />
                 </div>
-                <button className="btn" onClick={handleQuizSubmit}>Create Quiz</button>
+                <button className="btn green font" onClick={handleQuizSubmit}>Create Quiz</button>
                 {quiz.id ? (
-                <div>YOU JUST MADE A QUIZ CALLED {quiz.title}
+                <div className="alert font size">YOU JUST MADE A QUIZ CALLED {quiz.title}!
                 <p></p>
                 <Link to={"/questionmaker/" + quiz.id}>
-                <button type="button">
+                <button className="moving font btn-primary" type="button">
                      Make Some Questions
                 </button>
                 </Link>
