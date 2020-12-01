@@ -4,6 +4,7 @@ import SignIn from "../src/pages/SignIn"
 import QuizTime from "./pages/Quiz"
 import Teacher from "../src/pages/Teacher"
 import QuestionCreate from "../src/pages/QuestionCreate"
+import Answermaker from "../src/pages/Answermaker"
 
 
 import {
@@ -11,6 +12,7 @@ import {
   Route
 } from "react-router-dom";
 import "./App.css";
+
 
 
 class App extends Component {
@@ -40,6 +42,7 @@ class App extends Component {
         
           <Route path="/teacher" component={Teacher} />
           <Route exact path="/questionmaker/:id" component={QuestionCreate} />
+          <Route exact path="/answermaker/:qid/:id" component={Answermaker} />
           </>
         }
           {/* {/* <Route exact path="/" component={SignIn} />

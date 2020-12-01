@@ -38,7 +38,7 @@ function QuestionCreate(props){
                 {question.id ? (
                 <div>YOU JUST MADE A NEW QUESTION
                 <p></p>
-                <Link to={"/answermaker/" + question.id}>
+                <Link to={"/answermaker/" + props.match.params.id +"/" + question.id}>
                 <button type="button">
                      Make Some Possible Answers
                 </button>
