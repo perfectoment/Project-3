@@ -6,27 +6,15 @@ import "./style.css";
 
 function StudentQuizBank(props) {
 
-    const[result, setResult]=useState([]);
-
-    useEffect((id) => {
-        API.getAllQuizzes()
-        .then(data => {
-            setResult(data.data);
-        })
-          })
-
     return (
-        {result.map((quiz) => (
-        <StudentQuizCard
-            title
-        />
-    
-        ))
-    }
-    );
+
+        <div className="d-flex container" id="quizbank">TEST
+        {props.children}
+
+        </div>
+
+    )
 }
 
-
-    
 
 export default StudentQuizBank;
