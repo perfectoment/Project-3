@@ -65,7 +65,7 @@ app.post("/api/answer/:id", function(req,res){
             correct: answer.correct,
             QuestionId: req.params.id
         }).then(function(result){
-            console.log(result)
+            console.log(result,"crap")
             array.push(result)
         }).catch(err => {
             console.log(err)
