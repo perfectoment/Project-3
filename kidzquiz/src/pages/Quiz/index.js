@@ -46,6 +46,7 @@ const handleClick = event =>{
                 // questiontext={quiz.questiontext}
                 handleClick={handleClick}
                 handleClickCorrect={handleClickCorrect}
+                score={score}
 
                  
                 />

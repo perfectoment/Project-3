@@ -12,6 +12,7 @@ console.log(props)
                 <div className="card-body">
                     <h1 className="card-title">{props.title}</h1>
                     <h2 className="subjecttitle">Subject: {props.subject}</h2>
+                    <h3 className="scorecard">Score: {props.score}</h3>
                        
                     <form className="form-group">
 
@@ -24,17 +25,17 @@ console.log(props)
                         return(
                             <div>
                             <h3>{questions.questiontext}</h3>
-                        <button className="answer1"  onClick={(event) => props.handleClick(event)}>
+                        <button className="answer1 answer"  onClick={(event) => props.handleClick(event)}>
                             {questions.Answers[0].answertext}
                         </button>
-                        <button className="answer2" onClick={(event) => props.handleClick(event)} >
+                        <button className="answer2 answer" onClick={(event) => props.handleClick(event)} >
                             {questions.Answers[1].answertext}
                         </button>
-                        <button className="answer3" onClick={(event) => props.handleClick(event)}>
+                        <button className="answer3 answer" onClick={(event) => props.handleClick(event)}>
                             {questions.Answers[2].answertext}
                         </button>
 
-                        <button className="answer4" value="correct" onClick={(event) => props.handleClickCorrect(event)}>
+                        <button className="answer4 answer" value="correct" onClick={(event) => props.handleClickCorrect(event)}>
                             {questions.Answers[3].answertext}
                         </button>
                         </div>
