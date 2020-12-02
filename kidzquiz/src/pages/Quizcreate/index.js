@@ -52,9 +52,9 @@ function Quizcreate(){
 
 return(
 
-    <div className="container">
+    <div className="container flex">
         <div class="dropdown">
-                <button className="btn btn-success dropdown-toggle font" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button className="btn moving font green btn-hover dropdown-toggle font" id="dropD" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                    Choose a Subject!
             </button>
                 <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -63,20 +63,20 @@ return(
                     <div className="dropdown-item" data-value="history" onClick={handleSubject} >History</div>
                 </div>
             </div>
-            <label className="label font">Name Your Quiz!</label>
-                <div className="input-group-text input">
+            <label className="label font align-text-bottom" id="nameQuiz">Name Your Quiz!</label>
+                <div className="input-group-text input" id="itg">
                     <input required type="text" name="question" onChange={(event) => handleInputNameQuiz(event)} />
                 </div>
-                <label className="label font">Add Description!</label>
-                <div className="input-group-text input">
+                <label className="label font align-text-bottom" id="inputD">Add Description!</label>
+                <div className="input-group-text input" id="itg">
                     <input required type="text" name="question" onChange={(event) => handleInputDescriptionQuiz(event)} />
                 </div>
-                <button className="btn green font" onClick={handleQuizSubmit}>Create Quiz</button>
+                <button className="btn green font btn-hover" id="createQ" onClick={handleQuizSubmit}>Create Quiz</button>
                 {quiz.id ? (
                 <div className="alert font size">YOU JUST MADE A QUIZ CALLED {quiz.title}!
                 <p></p>
                 <Link to={"/questionmaker/" + quiz.id}>
-                <button className="moving font btn-primary" type="button">
+                <button className="btn moving font green btn-hover" id="someQ" type="button">
                      Make Some Questions
                 </button>
                 </Link>

@@ -1,25 +1,11 @@
-#selectquiz {
-    top: 10px;
-    width: 90%;
-
-    margin-top: 5%;
-    z-index: 5;
-    background-color: rgba(228, 210, 70, 0.509);
-    border-radius: 4px;
-    -moz-border-radius: 4px;
-    -webkit-border-radius: 4px;
-    box-shadow: 0px 0px 8px #f77bd4;
-    -moz-box-shadow: 0px 0px 8px #f77bd4;
-    -webkit-box-shadow: 0px 0px 8px #f77bd4;
-}
-
-.boogaloo{
-    color:black;
-    top: 10px;
-    width: 100%;
-    height: 25%;
+#selectQuiz {
+    width: 150px;
+    height: 150px;
     z-index: 10;
-    background-color: rgba(53, 200, 222, 0.509);
+    margin-right: 20px;
+    margin-top: 100%;
+    text-align: center;
+    background-color: rgba(23, 132, 115, 0.537);
     border-radius: 4px;
     -moz-border-radius: 4px;
     -webkit-border-radius: 4px;
@@ -27,3 +13,4 @@
     -moz-box-shadow: 0px 0px 8px #f77bd4;
     -webkit-box-shadow: 0px 0px 8px #f77bd4;
 }
+

@@ -2,6 +2,7 @@ import React from "react"
 import {useState} from "react"
 import API from "../../utils/API"
 import {Link} from "react-router-dom"
+import "./style.css"
 
 
 
@@ -41,24 +42,24 @@ function Answermaker(props){
 
 return(
 
-<div className="container">
+<div className="container flex">
     <form className="form" id="answerform" onSubmit={handleAnswer}>
-    <label className="label font size">Please Enter Your Incorrect Answers Below</label>
-        <div className="input-group-text">
-            <input required type="text" id="answer1" name="answer1"/>
+    <label className="label font size" id="enteri">Please Enter Your Incorrect Answers Below</label>
+        <div className="input-group-text" id="itg">
+            <input required type="text wide" id="answer1" name="answer1"/>
         </div>
-        <div className="input-group-text">
-            <input required type="text" id="answer2" name="answer2"/>
+        <div className="input-group-text" id="itg">
+            <input required type="text wide" id="answer2" name="answer2"/>
         </div>
-        <div className="input-group-text">
-            <input required type="text" id="answer3" name="answer3"/>
+        <div className="input-group-text" id="itg">
+            <input required type="text wide" id="answer3" name="answer3"/>
         </div>
 
-        <label className="label font size">Please Enter The Correct Answer</label>
-        <div className="input-group-text">
-            <input required type="text" id="correct" name="correctAnswer" />
+        <label className="label font size" id="enterc">Please Enter The Correct Answer</label>
+        <div className="input-group-text" id="itg">
+            <input required type="text wide" id="correct" name="correctAnswer" />
         </div>
-            <button className="green font size" >Submit Answers</button>
+            <button className="btn moving font green btn-hover" id="submitb">Submit Answers</button>
             </form>  
         < hr />
         {
@@ -79,7 +80,7 @@ return(
                 </button>
                 </Link>
                 <Link to={"/"}>
-                <button className="green" type="button">
+                <button className="green" id="quit" type="button">
                      Quit
                 </button>
                 </Link>

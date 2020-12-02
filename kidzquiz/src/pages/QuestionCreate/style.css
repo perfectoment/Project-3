@@ -1,9 +1,9 @@
-.alert{
+/* .alert{
     color: white;
     
-    }
+    } */
     
-    .green{
+    /* .green{
         background-color:rgba(155, 215, 94, 0.749);
         width: 100%;
       height: 100%;
@@ -16,7 +16,7 @@
       -webkit-box-shadow: 0px 0px 8px #59E19F;
       color:white
     
-    }
+    } */
     
     .label{
     color:white
@@ -27,14 +27,46 @@
         font-family:cursive
     }
     
-    .input{
-        width:100%
-    }
+    /* .input{
+        width:100%;
+        background-color:rgba(94, 199, 215, 0.646);
+        border-radius: 4px;
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 4px;
+        box-shadow: 0px 0px 8px #59E19F;
+        -moz-box-shadow: 0px 0px 8px #59E19F;
+        -webkit-box-shadow: 0px 0px 8px #59E19F;
+    } */
     
     .size{
         font-size: large;
     }
 
     .wide{
-        width:100%
+        width:100%;
+        /* background-color:rgba(94, 199, 215, 0.009); */
+        border-radius: 4px;
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 4px;
+        box-shadow: 0px 0px 8px #59E19F;
+        -moz-box-shadow: 0px 0px 8px #59E19F;
+        -webkit-box-shadow: 0px 0px 8px #59E19F;
     }
+
+
+    #askaway {
+        margin-top: 10%;
+    }
+    
+    #blah {
+        margin-top: 10%;
+    }
+
+    #made {
+        margin-top: 10%;
+    }
+
+    #createQ {
+        margin-top: 10%;
+    }
+
