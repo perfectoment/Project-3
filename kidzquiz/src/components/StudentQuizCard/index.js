@@ -9,7 +9,7 @@ import { Link } from "react-router-dom"
 function StudentQuizCard(props) {
     return (
         <div className="container">
-            <div className="row">
+            <div className="col">
                 <div className="card text-dark text-left rounded flex-row" id="selectQuiz" >
                     <div className="card-header text-left text-white" >{`${props.subject}`}
                         <h5 className="card-body text-dark text-left font-weight-bold" >{`${props.title}`}</h5>
@@ -17,7 +17,7 @@ function StudentQuizCard(props) {
                     </div>
                 </div>
                 <Link to={"/quiz/" + props.id}>
-                    <button className="btn moving font green btn-hover">
+                    <button  id ="ryan" className="btn font green btn-hover">
                         TakeQuiz
                     </button>
                 </Link>

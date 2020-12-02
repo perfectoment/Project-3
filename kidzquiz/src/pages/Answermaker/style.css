@@ -6,7 +6,7 @@
     .green{
         background-color:rgba(155, 215, 94, 0.749);
         width: 100%;
-      height: 100%;
+      /* height: 100%; */
       z-index: 50;
       border-radius: 4px;
       -moz-border-radius: 4px;
