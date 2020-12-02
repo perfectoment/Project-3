@@ -14,15 +14,16 @@ import API from "../../utils/API"
 function Student(props) {
 
     const [result, setResult] = useState([]);
-
+    
     useEffect(() => {
+        if (result.length < 1) {
         API.getAllQuizzes({})
             .then(data => {
                 console.log(data)
                 setResult(data.data);
             })
             
-
+        }
     } ,[])
 
    
