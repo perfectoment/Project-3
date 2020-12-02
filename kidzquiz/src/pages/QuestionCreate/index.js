@@ -22,6 +22,7 @@ function QuestionCreate(props){
             questiontext:questiontext,
             QuizId:props.match.params.id
         }).then(function(newQuestion){
+            console.log("question created")
             setQuestion(newQuestion.data)
         })
     }

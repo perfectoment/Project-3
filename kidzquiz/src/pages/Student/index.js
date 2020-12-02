@@ -15,12 +15,15 @@ function Student(props) {
 
     const [result, setResult] = useState([]);
 
-    useEffect((id) => {
+    useEffect(() => {
         API.getAllQuizzes({})
             .then(data => {
+                console.log(data)
                 setResult(data.data);
-            })
+            },[])
+
     })
+    
 
     return (
         <Wrapper>
@@ -29,6 +32,7 @@ function Student(props) {
 
                 {result.map(quiz => (
                     <StudentQuizCard
+
                         id={quiz.id}
                         subject={quiz.subject}
                         title={quiz.title}
