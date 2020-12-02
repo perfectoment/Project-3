@@ -48,6 +48,8 @@ function SignInModal(props, handleSubmit) {
                   <p className="control">
                     <button className="btn moving font green btn-hover" id="signupbutton" onClick={(event) => props.handleSubmit(event)}>SIGN UP</button>
                     <button className="btn moving font green btn-hover" id="loginbutton" onClick={(event) => props.handleLoginSubmit(event)}>LOG IN</button >
+                    <button className="btn moving font green btn-hover" id="signoutbutton" onClick={(event) => props.handleLogoutSubmit(event)}>LOG OUT</button >
+
                   </p>
                 </p>
               </div>

@@ -59,6 +59,15 @@ function SignIn() {
          })   
 
      };
+    
+     const handlelogoutSubmit = event =>{
+         event.preventDefault()
+         API.logoutUser()
+         .then(function(){
+             localStorage.clear()
+             history.push("/")
+         })
+     }
      
 
         return (
@@ -71,6 +80,8 @@ function SignIn() {
                     handleInputStudent={handleInputStudent}
                     handleInputTeacher={handleInputTeacher}
                     handleLoginSubmit={handleLoginSubmit}
+                    handlelogoutSubmit={handlelogoutSubmit}
+                    
                     
                 />
             </Wrapper>

@@ -125,7 +125,8 @@ app.get("/api/quiz/:id", function(req,res){
 
 app.get("/logout", function(req, res) {
     req.logout();
-    res.redirect("/");
+    res.send("logout");
+    
     });
 
 
