@@ -21,9 +21,9 @@ function SignIn() {
             {email:email, 
             password:password, 
             role:role}
-        ).then(res => {
+        ).then(
             localStorage.setItem("user", role)
-        })
+        )
             if(localStorage.getItem("user")==="student"){
             history.push("/student")}
             else if(localStorage.getItem("user")==="teacher"){
@@ -60,13 +60,12 @@ function SignIn() {
 
      };
     
-     const handlelogoutSubmit = event =>{
+     const handleLogoutSubmit = event =>{
          event.preventDefault()
-         API.logoutUser()
-         .then(function(){
-             localStorage.clear()
+         console.log("LOGGING OUT")
+          localStorage.removeItem("user")
              history.push("/")
-         })
+        
      }
      
 
@@ -80,7 +79,7 @@ function SignIn() {
                     handleInputStudent={handleInputStudent}
                     handleInputTeacher={handleInputTeacher}
                     handleLoginSubmit={handleLoginSubmit}
-                    handlelogoutSubmit={handlelogoutSubmit}
+                    handleLogoutSubmit={handleLogoutSubmit}
                     
                     
                 />

@@ -16,20 +16,21 @@ function Student(props) {
     const [result, setResult] = useState([]);
     
     useEffect(() => {
-        if (result.length < 1) {
+       
         API.getAllQuizzes({})
             .then(data => {
                 console.log(data)
                 setResult(data.data);
             })
             
-        }
+        
     } ,[])
 
    
     
 
     return (
+        <>{result ? (
         <Wrapper>
             <StudentQuizBank>
 
@@ -47,6 +48,12 @@ function Student(props) {
             </StudentQuizBank>
             <Footer />
         </Wrapper>
+
+    
+) : (
+    <div>loading...</div>
+  )}</>
+      
     );
 }
 
