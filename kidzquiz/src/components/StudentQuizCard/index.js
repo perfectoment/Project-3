@@ -7,17 +7,14 @@ import {Link} from "react-router-dom"
 
 function StudentQuizCard(props) {
 
-    
-
-
 
 
     return (
 
         <div className="card text-light text-center rounded flex-row" id="selectQuiz" >
-            <div className="card-body boogaloo" >{`${props.subject}`}</div>
-            <h1 className="card-header boogaloo" >{`${props.title}`}</h1>
-            <h3 className="card-text boogaloo" >{`${props.description}`}</h3>
+            <div className="card-body" />{`${props.subject}`}
+            <div className="card-header" />{`${props.title}`}
+            <p className="card-text" />{`${props.description}`}
 
             <Link to={"/quiz/" + props.id}> 
                 <button type="button">
