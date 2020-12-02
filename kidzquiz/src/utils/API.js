@@ -29,6 +29,7 @@ export default {
   },
   //Get full quizzes with questions, answers.
   getQuiz: function(id) {
+    console.log(id)
     return axios.get("/api/quiz/" + id);
   },
 //delete full quizzes with questions, answers

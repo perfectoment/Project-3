@@ -1,10 +1,11 @@
 import { Component } from 'react';
 import SignIn from "../src/pages/SignIn"
 import Student from "../src/pages/Student"
-import QuizTime from "./pages/Quiz"
+import Quiz from "../src/pages/Quiz"
 import Teacher from "../src/pages/Teacher"
 import QuestionCreate from "../src/pages/QuestionCreate"
 import Answermaker from "../src/pages/Answermaker"
+
 
 
 import {
@@ -34,6 +35,7 @@ class App extends Component {
 
           
           <Route path="/student" component={Student} /> 
+          <Route path ="/quiz/:id" component={Quiz}/>
           
 
           </>

@@ -18,7 +18,8 @@ function Quizcreate(){
  const handleSubject = event =>{
      console.log("event.target")
     //  event.preventDefault()
-     setSubject(event.target.value)
+     setSubject(event.target.dataset.value)
+     console.log(event.target)
      console.log(subject)
  }
 
@@ -57,9 +58,9 @@ return(
                    Choose a Subject!
             </button>
                 <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <div className="dropdown-item" value="math" onChange={handleSubject}>Math</div>
-                    <div className="dropdown-item" value="science" onChange={handleSubject} >Science</div>
-                    <div className="dropdown-item" value="history" onChange={handleSubject} >History</div>
+                    <div className="dropdown-item" data-value="math" onClick={handleSubject}>Math</div>
+                    <div className="dropdown-item" data-value="science" onClick={handleSubject} >Science</div>
+                    <div className="dropdown-item" data-value="history" onClick={handleSubject} >History</div>
                 </div>
             </div>
             <label className="label font">Name Your Quiz!</label>

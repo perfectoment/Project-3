@@ -1,8 +1,9 @@
 import React from "react";
+
 // import "./style.css";
 
 function Quiztaker(props) {
-
+console.log(props)
    
     return (
       
@@ -11,28 +12,35 @@ function Quiztaker(props) {
                 <div className="card-body">
                     <h1 className="card-title">{props.title}</h1>
                     <h2 className="subjecttitle">Subject: {props.subject}</h2>
+                       
                     <form className="form-group">
 
 
-                        <label className="label">{props.questiontext}</label>
+                        <label className="label"></label>
                         <div className="input-group-text">
+                        
                         </div>
-
-                        <button className="answer1"  onClick={(event) => props.handleClickW1(event)}>
-                            {props.question.answertext[0]}
+                    {props.question.map(questions =>{
+                        return(
+                            <div>
+                            <h3>{questions.questiontext}</h3>
+                        <button className="answer1"  onClick={(event) => props.handleClick(event)}>
+                            {questions.Answers[0].answertext}
                         </button>
-                        <button className="answer2" onClick={(event) => props.handleClickW2(event)} >
-                            {props.question.answertext[1]}
+                        <button className="answer2" onClick={(event) => props.handleClick(event)} >
+                            {questions.Answers[1].answertext}
                         </button>
-                        <button className="answer3" onClick={(event) => props.handleClickW3(event)}>
-                            {props.question.answertext[2]}
+                        <button className="answer3" onClick={(event) => props.handleClick(event)}>
+                            {questions.Answers[2].answertext}
                         </button>
 
                         <button className="answer4" value="correct" onClick={(event) => props.handleClickCorrect(event)}>
-                            {props.question.answertext[3]}
+                            {questions.Answers[3].answertext}
                         </button>
-
-                        < hr />
+                        </div>
+                    )})}
+                   
+                     
 
 
                     </form>

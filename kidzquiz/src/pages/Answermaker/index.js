@@ -6,7 +6,7 @@ import {Link} from "react-router-dom"
 
 
 function Answermaker(props){
-
+  console.log("props answermaker", props)
   
   const [answers, setAnswers] = useState([{}])
 
@@ -73,7 +73,7 @@ return(
                      <>
                      <div className="font size alert">DO YOU WANT TO MAKE ANOTHER QUESTION?
                 <p></p>
-                <Link to={"/questionmaker/" + props.match.params.id}>
+                <Link to={"/questionmaker/" + props.match.params.qid}>
                 <button className="green" type="button">
                      Make Another Question
                 </button>

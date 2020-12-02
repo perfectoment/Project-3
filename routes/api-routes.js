@@ -42,6 +42,7 @@ app.post("/api/user/quiz", function(req, res){
         res.json(results)
     })
 }); 
+
 app.post("/api/question/:id", function(req, res){
     db.Question.create({
         questiontitle: req.body.questiontitle,
@@ -53,6 +54,7 @@ app.post("/api/question/:id", function(req, res){
         console.log(results)
     }).catch(err => {
         console.log(err)
+        res.json({error: err})
     }) 
 });
 
@@ -83,7 +85,7 @@ app.get("/api/user/:id", function(req, res){
 })
 
 app.get("/api/quiz/", function(req, res){
-    db.Quiz.findAll({})
+    db.Quiz.findAll()
     .then(function(results){
         res.json(results)
     }).catch(err =>{
