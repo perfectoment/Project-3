@@ -21,15 +21,15 @@ function SignIn() {
             {email:email, 
             password:password, 
             role:role}
-        ).then(
+        ).then(res => {
             localStorage.setItem("user", role)
-        )
-            if(role==="student"){
+        })
+            if(localStorage.getItem("user")==="student"){
             history.push("/student")}
-            else if(role==="teacher"){
+            else if(localStorage.getItem("user")==="teacher"){
                 history.push("/teacher")
             }
-        
+      
     }
     
      const handleInputEmail = event =>{
@@ -56,9 +56,10 @@ function SignIn() {
             email:email,
             password:password,
             role:role,
-         })
+         })   
 
      };
+     
 
         return (
 
@@ -70,6 +71,7 @@ function SignIn() {
                     handleInputStudent={handleInputStudent}
                     handleInputTeacher={handleInputTeacher}
                     handleLoginSubmit={handleLoginSubmit}
+                    
                 />
             </Wrapper>
 
@@ -78,4 +80,3 @@ function SignIn() {
 
 export default SignIn;
 
-//FUCK FUCK FUCK FUCK FUCK FUCKK FUCK
