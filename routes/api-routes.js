@@ -16,6 +16,8 @@ app.post("/api/signup", function(req, res) {
     }).then(function(newUser){
         console.log(newUser)
         res.json(newUser)
+    }).catch(function(err) {
+            res.status(401).json(err);
     })
       
       

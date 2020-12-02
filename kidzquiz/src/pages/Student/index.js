@@ -20,9 +20,12 @@ function Student(props) {
             .then(data => {
                 console.log(data)
                 setResult(data.data);
-            },[])
+            })
+            
 
-    })
+    } ,[])
+
+   
     
 
     return (

@@ -2,6 +2,7 @@ import React from "react"
 import API from "../../utils/API";
 import {Link} from "react-router-dom"
 import {useState} from "react"
+import "./style.css"
 
 
 
@@ -30,17 +31,17 @@ function QuestionCreate(props){
 
 
     return(
-        <div className="container">
-            <label className="label font size">What Would You Like To Ask?</label>
-                <div className="input-group-text">
+        <div className="container flex" id="boxAsk">
+            <label className="label font size" id="askaway">What Would You Like To Ask?</label>
+                <div className="input-group-text" id="itg">
                     <input required className="wide" type="text" id="2" name="question" onChange={(event) => handleQtitle(event)} />
                 </div>
-                <button className="btn font alert green" onClick={handleQSubmit}>Create Question</button>
+                <button className="btn font alert green" id="createQ" onClick={handleQSubmit}>Create Question</button>
                 {question.id ? (
-                <div className="font size alert">YOU JUST MADE A NEW QUESTION!
+                <div className="font size alert" id="made">YOU JUST MADE A NEW QUESTION!
                 <p></p>
                 <Link to={"/answermaker/" + props.match.params.id +"/" + question.id}>
-                <button type="button" className="btn-primary">
+                <button className="btn moving font green btn-hover" >
                      Make Some Possible Answers
                 </button>
                 </Link>
