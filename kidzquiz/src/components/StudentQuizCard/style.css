@@ -9,8 +9,13 @@
     border-radius: 4px;
     -moz-border-radius: 4px;
     -webkit-border-radius: 4px;
-    box-shadow: 0px 0px 8px #f77bd4;
-    -moz-box-shadow: 0px 0px 8px #f77bd4;
-    -webkit-box-shadow: 0px 0px 8px #f77bd4;
+    box-shadow: 0px 0px 8px #F77BD4;
+    -moz-box-shadow: 0px 0px 8px #F77BD4;
+    -webkit-box-shadow: 0px 0px 8px #F77BD4;
 }
 
+#ryan{
+
+    width: 60%;
+    margin-left:0;
+}

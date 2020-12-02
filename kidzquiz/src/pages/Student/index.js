@@ -1,5 +1,5 @@
 import React, { useEffect, useState }  from "react";
-import Header from "../../components/Navbar";
+
 import Footer from "../../components/Footer";
 // import StudentSubject from "../../components/StudentSubject";
 import StudentQuizBank from "../../components/StudentQuizBank";
@@ -30,7 +30,6 @@ function Student(props) {
 
     return (
         <Wrapper>
-            <Header />
             <StudentQuizBank>
 
                 {result.map(quiz => (
