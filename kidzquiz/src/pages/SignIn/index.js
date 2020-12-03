@@ -4,6 +4,7 @@ import Title from "../../components/Title";
 import SignInModal from "../../components/SignIn";
 import Wrapper from "../../components/Wrapper";
 import API from "../../utils/API"
+import { Redirect } from "react-router-dom";
 
 
 
@@ -14,6 +15,8 @@ function SignIn() {
     const [password, setPassword] = useState("");
     const [role, setRole] = useState("");
    const history = useHistory()
+   const[submit, setSubmit] = useState(false)
+   
 
     const handleSubmit = event =>{
         event.preventDefault()
@@ -21,14 +24,18 @@ function SignIn() {
             {email:email, 
             password:password, 
             role:role}
-        ).then(
-            localStorage.setItem("user", role)
-        )
-            if(localStorage.getItem("user")==="student"){
-            history.push("/student")}
-            else if(localStorage.getItem("user")==="teacher"){
-                history.push("/teacher")
-            }
+        ).then(function(){
+            setRole(role);
+            setSubmit(true);
+        });
+            
+            // localStorage.setItem("user", role)
+    
+            // if(localStorage.getItem("user")==="student"){
+            // history.push("/student")}
+            // else if(localStorage.getItem("user")==="teacher"){
+            //     history.push("/teacher")
+            // }
       
     }
     
@@ -82,9 +89,13 @@ function SignIn() {
                     handleLogoutSubmit={handleLogoutSubmit}
                     
                     
+                    
                 />
-            </Wrapper>
 
+               {submit && role === "student" ? <Redirect to ="/student"/> : <> </>}
+               {submit && role === "teacher" ? <Redirect to ="/teacher"/> : <> </>}
+            </Wrapper>
+            
         );
     }
 

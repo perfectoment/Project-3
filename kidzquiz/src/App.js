@@ -5,6 +5,9 @@ import Quiz from "../src/pages/Quiz"
 import Teacher from "../src/pages/Teacher"
 import QuestionCreate from "../src/pages/QuestionCreate"
 import Answermaker from "../src/pages/Answermaker"
+// import {useState} from "react-router-dom"
+
+// let [authenticate, setAuthenticate] = useState("")
 
 
 
@@ -15,9 +18,8 @@ import {
 import "./App.css";
 
 
-
-class App extends Component {
-  render() {
+function App() {
+  
     return (
       
       <BrowserRouter basename="/">
@@ -27,8 +29,13 @@ class App extends Component {
 
       {/* <Navbar /> */}
       <Route exact path="/" component={SignIn} />
+      <Route path ="/student" component ={Student}/>
+      <Route path ="/quiz/:id" component ={Quiz}/>
+      <Route path="/teacher" component={Teacher} />
+      <Route exact path="/questionmaker/:id" component={QuestionCreate} />
+      <Route exact path="/answermaker/:qid/:id" component={Answermaker} />
        
-        {
+        {/* {
           localStorage.user === "student" ? 
           <>
           
@@ -46,7 +53,7 @@ class App extends Component {
           <Route exact path="/questionmaker/:id" component={QuestionCreate} />
           <Route exact path="/answermaker/:qid/:id" component={Answermaker} />
           </>
-        }
+        } */}
           {/* {/* <Route exact path="/" component={SignIn} />
           <Route path="/student" component={Student} />
 
@@ -57,6 +64,6 @@ class App extends Component {
 
     );
   }
-}
+
 
 export default App;
