@@ -57,7 +57,7 @@ SIGN IN PAGE:
 * Find the Github Repository [HERE](https://github.com/AndrewKosel/Project-3)
 
 ## Deployed Link
-* 
+* [KidzQuiz](https://kidzquiz.herokuapp.com/)
 
 ## Authors
 * Ryan Nemec | [GITHUB](https://github.com/perfectoment)
